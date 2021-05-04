@@ -1,5 +1,6 @@
 # grupo_10_textiles
 
+<<<<<<< HEAD
 Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables. 
 
 Nuestra audiencia seran laboratorios, empesas de construccion, fabricas. 
@@ -10,3 +11,8 @@ Integrantes del equipo:
 Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
 Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programacion. 
+=======
+probando editar 
+probando editar desde visual 
+
+>>>>>>> 064f89708b98f29c5bf555b9f0d27fa1c92757cf
