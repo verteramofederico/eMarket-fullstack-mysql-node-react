@@ -13,7 +13,7 @@ Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programac
 
 Agustin Acuña Quelas. 27 años. Posadas, Misiones, Argentina. Lic. en Administracion.
 
-Listado de Paginas:
+## Listado de Paginas:
 
 - Por los productos o servicios que ofrecen: 
 PIP (https://us.pipglobal.com/en/) : cuenta en su stock con mucha variedad de productos, todos agrupados segun la funcionalidad, y ademas cuenta con otro filtro segun la marca
@@ -29,7 +29,7 @@ https://dsiproteccion.com
 Tiene una pagina de inicio que es facil de usar, que permite visualizar sus productos de una forma ordenada y agregarlos al carrito de compras en una misma pagina.
 
 - Funcionalidades:
-https://us.pipglobal.com/en/
+https://www.engel.eu/en/
 Por el enfoque creativo en un rubro que en general no lo es.
 
 - Por la estética y funcionalidad que presentan:
