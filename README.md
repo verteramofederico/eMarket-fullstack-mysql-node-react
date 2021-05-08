@@ -5,7 +5,7 @@ Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chale
 Nuestra audiencia seran laboratorios, empesas de construccion, fabricas. 
 Ajustaremos nuestra oferta a ese publico proveyendo la mas alta calidad segun estandares internacionales, priorizando la seguridad y durabilidad en nuestros productos. 
 
-Integrantes del equipo: 
+# Integrantes del equipo: 
 
 Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
