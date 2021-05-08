@@ -5,7 +5,7 @@ Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chale
 Nuestra audiencia seran laboratorios, empesas de construccion, fabricas. 
 Ajustaremos nuestra oferta a ese publico proveyendo la mas alta calidad segun estandares internacionales, priorizando la seguridad y durabilidad en nuestros productos. 
 
-# Integrantes del equipo: 
+## Integrantes del equipo: 
 
 Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
@@ -13,7 +13,7 @@ Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programac
 
 Agustin Acuña Quelas. 27 años. Posadas, Misiones, Argentina. Lic. en Administracion.
 
-## Listado de Paginas:
+### Listado de Paginas:
 
 - Por los productos o servicios que ofrecen: 
 PIP (https://us.pipglobal.com/en/) : cuenta en su stock con mucha variedad de productos, todos agrupados segun la funcionalidad, y ademas cuenta con otro filtro segun la marca
