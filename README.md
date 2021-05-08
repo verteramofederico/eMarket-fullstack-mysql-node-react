@@ -1,4 +1,4 @@
-# grupo_10_textiles
+# grupo_10_GAFtextiles
 
 Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables. 
 
