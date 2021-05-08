@@ -11,6 +11,8 @@ Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
 Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programacion. 
 
+Agustin Acuña Quelas. 27 años. Posadas, Misiones, Argentina. Lic. en Administracion.
+
 Listado de Paginas:
 
 - Por los productos o servicios que ofrecen: 
