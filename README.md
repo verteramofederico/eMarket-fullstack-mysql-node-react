@@ -4,7 +4,7 @@ GAF Textiles es un distribuidor mayorista dedicado a la venta de indumentaria de
 
 Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables y articulos varios de seguridad industrial. 
 
-Nuestra audiencia seran laboratorios, empesas de construccion, fabricas. 
+Nuestra audiencia son laboratorios, empesas de construccion, fabricas. 
 Ajustaremos nuestra oferta a ese publico proveyendo la mas alta calidad segun estandares internacionales, priorizando la seguridad y durabilidad en nuestros productos. 
 
 ## Wireframe 
