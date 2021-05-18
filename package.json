@@ -1,0 +1,23 @@
+{
+  "name": "grupo_10_gftextiles",
+  "version": "1.0.0",
+  "description": "GAF Textiles es un distribuidor mayorista dedicado a la venta de indumentaria de trabajo y articulos de seguridad industrial.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verteramofederico/grupo_10_GFtextiles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verteramofederico/grupo_10_GFtextiles/issues"
+  },
+  "homepage": "https://github.com/verteramofederico/grupo_10_GFtextiles#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^16.1.0"
+  }
+}
