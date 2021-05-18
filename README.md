@@ -34,6 +34,11 @@ Por el enfoque creativo en un rubro que en general no lo es.
 https://www.mercadolibre.com.ar/
 Impecable y limpia funcionalidad. 
 
+
+## Tablero de trabajo
+
+https://trello.com/b/CK8np7d1/tablero-gaf
+
 ## Integrantes del equipo: 
 
 Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
