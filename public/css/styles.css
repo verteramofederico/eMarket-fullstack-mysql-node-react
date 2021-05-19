@@ -1,0 +1,163 @@
+/* paleta
+
+de verde oscuro a claro
+#52734d
+#91c788
+#ddffbc
+#feffde */
+
+*  {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", 'Roboto', sans-serif;
+    
+}
+
+/* ---------------  HEADER  ----------------- */
+
+.header {
+    background-color: #52734d;
+    padding: 10px;
+}
+
+.header__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header__main__logo {
+    max-width: 90px;
+    max-height: 90px;
+}
+
+.header__main__navbar {
+    display: flex;
+}
+
+.header__main__left-navbar {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 5px 0;
+    font-size: 15px;
+    
+}
+
+.header__main__right-navbar {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+
+
+/* ---------------  MAIN  ----------------- */
+
+main {
+    background-color:#feffde;
+/*     padding: 20px; */
+}
+
+.main__banner {
+    width: 100vw;
+    max-height: 30vh;
+    margin-bottom: 20px;
+}
+
+.main__products {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 30px 0;
+
+}
+
+.main__article__precio {
+    font-size: 17px;
+}
+
+.main__article__descripcion {
+    font-size: 14px;
+}
+
+.fa-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    color: green; 
+    border-radius: 50%;
+} 
+
+.main__article img {
+    max-width: 20vh;
+    height: 20vh;
+}
+
+.main__h1 {
+    text-align: center;
+    color: #52734d;
+}
+
+.main__h6 {
+    text-align: center;
+    color: #91c788;
+    margin-top: -30px;
+    font-weight: 900;
+}
+
+.main__fotoDoble {
+    display: flex;
+    justify-content: center;
+}
+
+.main__fotoDoble img {
+    width: 30vw;
+    max-height: 80vh;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------------  FOOTER  ----------------- */
+
+.footer {
+    background-color: #ddffbc;
+    display: flex;
+}
+
+
+
+.footer__logo {
+    max-width: 78px;
+    max-height: 78px;
+}
+
+.footer__contacto {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.footer__redes {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px 0;
+    font-size: 15px;
+ 
+}
