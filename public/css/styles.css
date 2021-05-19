@@ -136,9 +136,20 @@ main {
 .footer {
     background-color: #ddffbc;
     display: flex;
+    justify-content: space-between;
+    padding: 30px;
 }
 
+.footer h3 {
+    margin-bottom: 10px;
+    color: #52734d;
+    font-size: 20px; 
+}
 
+.footer ul {
+    list-style: none;
+    font-size: 14px;
+}
 
 .footer__logo {
     max-width: 78px;
@@ -150,7 +161,13 @@ main {
     flex-direction: column;
     list-style: none;
     padding: 5px 0;
-    font-size: 15px;
+}
+
+.footer__categorias {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px 0;
 }
 
 .footer__redes {
@@ -158,6 +175,23 @@ main {
     flex-direction: column;
     list-style: none;
     padding: 5px 0;
-    font-size: 15px;
- 
 }
+
+.footer__redes__iconos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #52734d;
+}
+
+.fa-facebook-f, .fa-instagram, .fa-twitter {
+    font-size: 22px;
+    margin-right: 16px;
+}
+
+
