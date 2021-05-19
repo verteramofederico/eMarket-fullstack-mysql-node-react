@@ -26,9 +26,11 @@ body {
 
 .header__main {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; /* para ocupar ambos extremos */
+}
+
+.header__main__left {
+    display: flex; /* junta logo y categorias */
 }
 
 .header__main__logo {
@@ -36,28 +38,37 @@ body {
     max-height: 90px;
 }
 
-.header__main__navbar {
-    display: flex;
-}
-
-.header__main__left-navbar {
-    display: flex;
-    list-style: none;
-    justify-content: flex-start;
+.header__main__leftnavbar {
+    display: flex;  /* ponemos horizontal las categorias */
     padding: 5px 0;
     font-size: 15px;
+    margin-left: 30px; /* separacion del logo */
+    list-style: none;
+    margin-top: 30px; 
+}
+
+.header__main__rightnavbar {
+    display: flex; 
+    flex-direction: column; /* encolumnar carrito y registro */
+    padding: 5px 0;
+    font-size: 15px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.header__main__leftnavbar li {
+    margin-right: 9px;
+}
+
+.header__main__rightnavbar li {
+    margin-bottom: 4px;
+}
+
+.header__main__rightnavbar a, .header__main__leftnavbar a  {
+    color: #feffde;
+    text-decoration-line: none;
     
 }
-
-.header__main__right-navbar {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 5px 0;
-    font-size: 15px;
-}
-
-
 
 /* ---------------  MAIN  ----------------- */
 
