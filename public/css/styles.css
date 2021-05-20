@@ -41,7 +41,7 @@ body {
 .header__main__leftnavbar {
     display: flex;  /* ponemos horizontal las categorias */
     padding: 5px 0;
-    font-size: 15px;
+    font-size: 17px;
     margin-left: 30px; /* separacion del logo */
     list-style: none;
     margin-top: 30px; 
@@ -68,6 +68,11 @@ body {
     color: #feffde;
     text-decoration-line: none;
     
+}
+
+.header__main__rightnavbar a:hover, .header__main__leftnavbar a:hover {
+    background-color: white;
+    color: black;
 }
 
 /* ---------------  MAIN  ----------------- */
@@ -179,6 +184,17 @@ main {
     flex-direction: column;
     list-style: none;
     padding: 5px 0;
+    color: black;
+}
+
+.footer__categorias a {
+    color: black;
+    font-weight: 500;
+}
+
+.footer__categorias a:hover {
+    background-color: white;
+    color: black;
 }
 
 .footer__redes {
@@ -206,3 +222,10 @@ main {
 }
 
 
+
+
+/* -------------- ADAPTACION TABLETS --------------*/
+
+@media (min-width: 450px) {
+    
+}
