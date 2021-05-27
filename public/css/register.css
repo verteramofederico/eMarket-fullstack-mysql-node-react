@@ -23,14 +23,23 @@
 
 .formulario__field button {
     margin: auto;
-    background-color: #155192;
+    background-color: #133d1c;
     width: 30vw; 
+    height: 28px;
     color: white;
     font-weight: 200;
-    margin-top: 18px;
+    margin-top: 28px;
     border: initial;
     border-radius: 5%;
     margin-bottom: 10px;
+}
+
+.botonEnviar{
+    transition: all 0.5s;
+}
+
+.botonEnviar:hover {
+    background-color: #3181d6;
 }
 
 .fecha {

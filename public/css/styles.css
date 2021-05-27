@@ -34,8 +34,8 @@ body {
 }
 
 .header__main__logo {
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 70px;
+    max-height: 70px;
 }
 
 .header__main__leftnavbar {
@@ -84,41 +84,8 @@ main {
 
 .main__banner {
     width: 100vw;
-    max-height: 30vh;
+    max-height: 35vh;
     margin-bottom: 20px;
-}
-
-.main__products {
-    display: flex;
-    justify-content: space-around;
-    background-color: white;
-    padding: 30px 0;
-
-}
-
-.main__article__precio {
-    font-size: 17px;
-}
-
-.main__article__descripcion {
-    font-size: 14px;
-}
-
-.fa-truck {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    color: green; 
-    border-radius: 50%;
-} 
-
-.main__article img {
-    max-width: 20vh;
-    height: 20vh;
 }
 
 .main__h1 {
@@ -145,6 +112,73 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* Propiedades de articulos en el Home: */
+
+.main__articulos {
+    margin: 10px;
+    background-color: white;
+    position: relative; /* para que el h4 no se escape */
+    transition: all 450ms
+}
+
+.detalleArticulos {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+}
+
+.descripciones {  
+    font-size: 15px;
+    display: none;
+}
+
+
+.imagenArticulo {
+    width: 60vw;
+    margin: auto;
+}
+
+/* Para centrar imagen unicamente en mobile */
+@media (max-width: 500px) {
+
+.imagenArticulo {
+    position: relative;
+    left: 15vw;
+} 
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.descuentos {
+    font-size: 15px;
+    font-weight: bold;
+    color: #39b54a; 
+}
+
+.fa-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    color: green; 
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15p 
+} 
+
+
+.main__section__destacados {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 /* ---------------  FOOTER  ----------------- */
@@ -224,8 +258,91 @@ main {
 
 
 
-/* -------------- ADAPTACION TABLETS --------------*/
+/* ------ Tablets -------- */
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
+    .descripciones {
+        display: block;
+    }
+
+    .detalleArticulos {
+        display: none;
+    }
     
+    .imagenArticulo:hover + .detalleArticulos {
+        display: block;
+        opacity: 1;
+        background-color: rgba(39, 99, 69, 0.2);
+        width: 45vw;
+    }
+
+    .imagenArticulo:hover {
+        box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+        width: 45vw;
+    }
+
+    .main__section__destacados, .main__section__ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main__articulos *{
+        width: 40vw;
+    }
+
+    .detalleArticulos {
+        width: 40vw;
+    }
+
+    .fa-truck {
+        max-width: 3vw;
+    }
+ 
 }
+
+/* Desktop */
+
+@media (min-width: 769px) {
+
+    .imagenArticulo:hover + .detalleArticulos {
+        display: block;
+        opacity: 1;
+        background-color: rgba(39, 99, 69, 0.2);
+        width: 25vw;
+    }
+
+    .imagenArticulo:hover {
+        box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+        width: 25vw;
+    }
+
+    .main__section__lastvisit, .main__section__ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main__articulos *{
+        width: 20vw;
+    }
+
+    .detalleArticulos {
+        width: 20vw;
+    }
+    .fa-truck {
+        max-width: 3vw;
+    }
+ 
+}
+
+@media (min-width: 1200px) {
+    .fa-truck {
+        max-width: 2vw;
+    }
+ 
+
+}
+
