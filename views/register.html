@@ -10,6 +10,8 @@
     rel="stylesheet" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/register.css">
+
 </head>
 <body>
 
@@ -48,52 +50,37 @@
 
 <!-- ------------------ MAIN ----------------- -->
 
-    <main class="main">
-        <img class="main__banner" src="/images/slide-1588432077184-8272420312-23c6ea96035afa50e9a0414b5395f8631588432079-1920-1920.jpeg" alt="">
+<main>
+    <br>
+<h1 class="titulo">Iniciar Sesión</h1>
 
-        <section class="main__products">
-            <article class="main__article">
-                <img src="/images/pantalon pampero.webp" alt="">
-                    <p class="main__article__precio">$1.500</p>
-                    <h4 class="main__article__descripcion">Pantalon Cargo</h4>
-                    <div> <i class="fas fa-truck"></i>
-                </div>
-            </article>
-            <article class="main__article">
-                <img src="/images/botin pampero.jpeg" alt="">
-                    <p class="main__article__precio">$1.500</p>
-                    <h4 class="main__article__descripcion">Pantalon Cargo</h4>
-                    <div> <i class="fas fa-truck"></i>
-                </div>
-            </article>
-            <article class="main__article">
-                <img src="/images/casco amarillo.jpeg" alt="">
-                    <p class="main__article__precio">$1.500</p>
-                    <h4 class="main__article__descripcion">Pantalon Cargo</h4>
-                    <div> <i class="fas fa-truck"></i>
-                </div>
-            </article>
-            <article class="main__article">
-                <img src="/images/camisa Pampero.webp" alt="">
-                    <p class="main__article__precio">$1.500</p>
-                    <h4 class="main__article__descripcion">Pantalon Cargo</h4>
-                    <div> <i class="fas fa-truck"></i>
-                </div>
-            </article>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <fieldset class="formulario__field">
 
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required minlength="3">
 
-        </section>
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required minlength="4" >
+            
+            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
 
-        <h1 class="main__h1"> GAF Textiles </h1>
-        <h6 class="main__h6">Todo lo que su empresa necesita en seguridad industrial</h6>
+            <label class="intereses" for="interes">Intereses</label>
+            <label><input type="checkbox" name="interes" value="Construccion"> Construccion</label>
+            <label><input type="checkbox" name="interes" value="Sanitario"> Sanitario</label>
+            <label><input type="checkbox" name="interes" value="Jardineria"> Jardineria</label>  
+            <label><input type="checkbox" name="interes" value="Otros"> Otros</label>
 
-        <div class="main__fotoDoble">
-            <img src="/images/engel-regntoj.jpg" alt="">
-            <img src="/images/ny-engel-safety.jpg" alt="">
-        </div>
+            <input type="password" required minlength="4" placeholder="Contraseña">
+            <input type="password" required minlength="4" placeholder="Confirmar Contraseña">
 
+            <label><input type="checkbox" name="suscripcion" value="suscribe"> Deseo suscribirme a novedades</label>
 
-    </main>
+            <button class="botonEnviar" type="submit">enviar</button>
+            <button type="reset">borrar</button>
+
+        </fieldset>
+    </form>
+
+</main>
 
     <!-- ---------------- FOOTER ----------------- -->
 
