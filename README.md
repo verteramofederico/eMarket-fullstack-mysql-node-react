@@ -1,10 +1,6 @@
 # grupo_10_GAFtextiles
 
-<<<<<<< HEAD
-Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables. 
-=======
 GAF Textiles es un distribuidor mayorista dedicado a la venta de indumentaria de trabajo y articulos de seguridad industrial. 
->>>>>>> e0f915816bb8a9a0edee80dbf6aa369f3407f017
 
 Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables y articulos varios de seguridad industrial. 
 
@@ -48,8 +44,5 @@ https://trello.com/b/CK8np7d1/tablero-gaf
 Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
 Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programacion. 
-<<<<<<< HEAD
-=======
 
 Agustin Acuña Quelas. 27 años. Posadas, Misiones, Argentina. Lic. en Administracion.
->>>>>>> e0f915816bb8a9a0edee80dbf6aa369f3407f017
