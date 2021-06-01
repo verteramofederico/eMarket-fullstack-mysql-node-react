@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+node_modules;
+=======
 node_modules
 
 
@@ -6,4 +9,5 @@ node_modules
 
 
 
+>>>>>>> 0dda56f1c3ac522de56ac8e32b8fa6648d4bc3db
 
