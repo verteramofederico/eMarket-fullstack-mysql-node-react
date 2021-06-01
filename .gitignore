@@ -1,4 +1,8 @@
-node_modules
+#ignora node modules
+node_modules;
+
+productDetail.html
+
 
 
 
