@@ -7,6 +7,9 @@ Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chale
 Nuestra audiencia son laboratorios, empesas de construccion, fabricas. 
 Ajustaremos nuestra oferta a ese publico proveyendo la mas alta calidad segun estandares internacionales, priorizando la seguridad y durabilidad en nuestros productos. 
 
+## Link a web 
+https://gaftextiles.herokuapp.com/
+
 ## Wireframe 
 Link donde se encuentra Wireframes del home y otras secciones importantes: 
 https://www.figma.com/file/Qne4BeePVB47Zo2xLgQS1H/Figma-Basics?node-id=0%3A286 
