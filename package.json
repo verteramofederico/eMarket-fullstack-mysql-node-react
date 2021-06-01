@@ -4,7 +4,8 @@
   "description": "GAF Textiles es un distribuidor mayorista dedicado a la venta de indumentaria de trabajo y articulos de seguridad industrial.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
