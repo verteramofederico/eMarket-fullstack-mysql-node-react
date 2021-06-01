@@ -174,83 +174,80 @@ main {
 
 /* ---------------  FOOTER  ----------------- */
 
-.footer {
-    background-color: #8BC34A;
-    padding: 30px;
-    display: flex;
-    fle
+/* Como la pagina se hizo primero en destokp hacemos una media para hacer el footer adaptado a telefono */
+
+@media (max-width: 499px) {
+    .footer {
+        background-color: #8BC34A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    
+    .footer h3 {
+        margin-bottom: 10px;
+        color: #52734d;
+        font-size: 20px;
+        text-align: center; 
+    }
+    
+    .footer ul {
+        list-style: none;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer__logo {
+        display: none;
+    }
+    
+    .footer__contacto {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__categorias {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+        color: black;
+    }
+    
+    .footer__categorias a {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .footer__redes {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__redes__iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
+        font-size: 18px;
+        margin-right: 10px;
+        color: #52734d;
+    }
+    
+    .fa-facebook-f, .fa-instagram, .fa-twitter {
+        font-size: 22px;
+        margin-right: 16px;
+    }
+ 
 }
-
-.footer h3 {
-    margin-bottom: 10px;
-    color: #52734d;
-    font-size: 20px; 
-}
-
-.footer ul {
-    list-style: none;
-    font-size: 14px;
-}
-
-.footer__logo {
-    max-width: 148px;
-    max-height: 138px;
-    position: relative;
-    bottom: 15px;
-    z-index: 1;
-}
-
-.footer__contacto {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 5px 0;
-}
-
-.footer__categorias {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 5px 0;
-    color: black;
-}
-
-.footer__categorias a {
-    color: black;
-    font-weight: 500;
-}
-
-.footer__categorias a:hover {
-    background-color: white;
-    color: black;
-}
-
-.footer__redes {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 5px 0;
-}
-
-.footer__redes__iconos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
-    font-size: 18px;
-    margin-right: 10px;
-    color: #52734d;
-}
-
-.fa-facebook-f, .fa-instagram, .fa-twitter {
-    font-size: 22px;
-    margin-right: 16px;
-}
-
-
-
 
 /* ------ Tablets -------- */
 
@@ -259,79 +256,7 @@ main {
         display: block;
     }
 
-    .fa-bars {
-        display: none;
-    }
-
-    .header {
-        max-height: 16vh;
-    }
-
-    .header__main {
-        display: flex;
-        justify-content: space-between; /* para ocupar ambos extremos */
-      
-    }
     
-    .header__main__left {
-        display: flex; /* junta logo y categorias */
-    }
-    
-    .header__main__logo {
-        width: 260px;
-        height: 260px;
-        position: relative;
-        z-index: 1;
-        top: -89px;
-        transition: all 0.4s;
-        left: 0%;
-    }
-    
-    .header__main__logo:hover {
-        width: 280px;
-        height: 270px;
-        top: -95px;
-    }
-    
-    
-    .header__main__leftnavbar {
-        display: flex;  /* ponemos horizontal las categorias */
-        padding: 5px 0;
-        font-size: 17px;
-        margin-left: 10px; /* separacion del logo */
-        list-style: none;
-        margin-top: 30px; 
-    }
-    
-    .header__main__rightnavbar {
-        display: flex; 
-        flex-direction: column; /* encolumnar carrito y registro */
-        padding: 5px 0;
-        font-size: 15px;
-        list-style: none;
-        margin-top: 10px;
-    }
-    
-    .header__main__leftnavbar li {
-        margin-right: 45px;
-    }
-    
-    .header__main__rightnavbar li {
-        margin-bottom: 4px;
-    }
-    
-    .header__main__rightnavbar a, .header__main__leftnavbar a  {
-        color: #DCEDC8;
-        text-decoration-line: none;
-        transition: all 1s;
-        
-    }
-    
-    .header__main__rightnavbar a:hover, .header__main__leftnavbar a:hover {
-        background-color: ;
-        color: #DCEDC8;
-        font-size: 1.2em;
-    }
 
     /* .detalleArticulos {
         display: none;
@@ -362,7 +287,7 @@ main {
         background-color: #8BC34A;
         display: flex;
         justify-content: space-between;
-        padding: 30px;
+        padding: 30px 8vw;
         max-height: 30vh;
     }
     
@@ -432,6 +357,7 @@ main {
     .fa-facebook-f, .fa-instagram, .fa-twitter {
         font-size: 22px;
         margin-right: 16px;
+        color: #448AFF;
     }
  
 }
@@ -442,6 +368,79 @@ main {
 
           /* 760px header */
         
+          .fa-bars {
+            display: none;
+        }
+    
+        .header {
+            max-height: 16vh;
+        }
+    
+        .header__main {
+            display: flex;
+            justify-content: space-between; /* para ocupar ambos extremos */
+          
+        }
+        
+        .header__main__left {
+            display: flex; /* junta logo y categorias */
+        }
+        
+        .header__main__logo {
+            width: 260px;
+            height: 260px;
+            position: relative;
+            z-index: 1;
+            top: -89px;
+            transition: all 0.4s;
+            left: 0%;
+        }
+        
+        .header__main__logo:hover {
+            width: 280px;
+            height: 270px;
+            top: -95px;
+        }
+        
+        
+        .header__main__leftnavbar {
+            display: flex;  /* ponemos horizontal las categorias */
+            padding: 5px 0;
+            font-size: 17px;
+            margin-left: 10px; /* separacion del logo */
+            list-style: none;
+            margin-top: 30px; 
+        }
+        
+        .header__main__rightnavbar {
+            display: flex; 
+            flex-direction: column; /* encolumnar carrito y registro */
+            padding: 5px 0;
+            font-size: 15px;
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .header__main__leftnavbar li {
+            margin-right: 45px;
+        }
+        
+        .header__main__rightnavbar li {
+            margin-bottom: 4px;
+        }
+        
+        .header__main__rightnavbar a, .header__main__leftnavbar a  {
+            color: #DCEDC8;
+            text-decoration-line: none;
+            transition: all 1s;
+            
+        }
+        
+        .header__main__rightnavbar a:hover, .header__main__leftnavbar a:hover {
+            background-color: ;
+            color: #DCEDC8;
+            font-size: 1.2em;
+        }
 
 
         /* 760px main */
