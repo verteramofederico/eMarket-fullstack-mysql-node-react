@@ -1,0 +1,491 @@
+/* Palette  */
+
+.dark-primary-color    { background: #689F38; }
+.default-primary-color { background: #8BC34A; }
+.light-primary-color   { background: #DCEDC8; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: #448AFF; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+
+*  {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", 'Roboto', sans-serif;
+    
+}
+
+/* ---------------  HEADER  ----------------- */
+
+.header {
+    background-color: #689F38;
+    padding: 10px;
+    max-height: 25vh;
+}
+
+.header__main__logo {
+    width: 40vw;
+    height: 28vh;
+    position: relative;
+    z-index: 1;
+    top: -59px;
+    transition: all 0.4s;
+    left: 33vw;
+}
+
+.header__main__leftnavbar, .header__main__rightnavbar {
+    display: none;
+}
+
+.fa-bars {
+    position: relative;
+    bottom: 110px;
+    left: 46vw;
+    z-index: 2;
+    font-size: 2em;
+    font-weight: bold;
+    color: #DCEDC8;
+    
+}
+
+/* ---------------  MAIN  ----------------- */
+
+main {
+    background-color:#DCEDC8;
+/*     padding: 20px; */
+}
+
+.main__banner {
+    width: 100vw;
+    max-height: 90vh;
+    margin-bottom: 20px;
+}
+
+.main__titulos {
+    text-align: center;
+    color: #757575;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.main__titulos a {
+    color: #448AFF;
+    font-size: 0.7em;
+}
+
+.main__h1 {
+    text-align: center;
+    color: #52734d;
+}
+
+.main__h6 {
+    text-align: center;
+    color: #91c788;
+    margin-top: -30px;
+    font-weight: 900;
+}
+
+.main__fotoDoble {
+    display: flex;
+    justify-content: center;
+}
+
+.main__fotoDoble img {
+    width: 30vw;
+    max-height: 80vh;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Propiedades de articulos en el Home: */
+
+.main__articulos {
+    margin: 10px;
+    background-color: white;
+    position: relative; /* para que el h4 no se escape */
+    transition: all 450ms
+}
+
+.detalleArticulos {
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+}
+
+.descripciones {  
+    font-size: 15px;
+    display: none;
+}
+
+
+.imagenArticulo {
+    width: 60vw;
+    margin: auto;
+}
+
+/* Para centrar imagen unicamente en mobile */
+@media (max-width: 500px) {
+
+.imagenArticulo {
+    position: relative;
+    left: 15vw;
+} 
+}
+
+.precio {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.descuentos {
+    font-size: 15px;
+    font-weight: bold;
+    color: #39b54a; 
+}
+
+.fa-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    color: green; 
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15p 
+} 
+
+
+.main__section__destacados {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ---------------  FOOTER  ----------------- */
+
+/* Como la pagina se hizo primero en destokp hacemos una media para hacer el footer adaptado a telefono */
+
+@media (max-width: 499px) {
+    .footer {
+        background-color: #8BC34A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    
+    .footer h3 {
+        margin-bottom: 10px;
+        color: #52734d;
+        font-size: 20px;
+        text-align: center; 
+    }
+    
+    .footer ul {
+        list-style: none;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer__logo {
+        display: none;
+    }
+    
+    .footer__contacto {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__categorias {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+        color: black;
+    }
+    
+    .footer__categorias a {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .footer__redes {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__redes__iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
+        font-size: 18px;
+        margin-right: 10px;
+        color: #52734d;
+    }
+    
+    .fa-facebook-f, .fa-instagram, .fa-twitter {
+        font-size: 22px;
+        margin-right: 16px;
+    }
+ 
+}
+
+/* ------ Tablets -------- */
+
+@media (min-width: 500px) {
+    .descripciones {
+        display: block;
+    }
+
+    
+
+    /* .detalleArticulos {
+        display: none;
+    } */
+
+    .main__section__destacados, .main__section__ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main__articulos *{
+        width: 40vw;
+    }
+
+    .detalleArticulos {
+        width: 40vw;
+    }
+
+    .fa-truck {
+        max-width: 3vw;
+    }
+
+    /* Tablet footer */
+
+    .footer {
+        background-color: #8BC34A;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 8vw;
+        max-height: 30vh;
+    }
+    
+    .footer h3 {
+        margin-bottom: 10px;
+        color: #52734d;
+        font-size: 20px; 
+    }
+    
+    .footer ul {
+        list-style: none;
+        font-size: 14px;
+    }
+    
+    .footer__logo {
+        max-width: 148px;
+        max-height: 138px;
+        position: relative;
+        bottom: 15px;
+        z-index: 1;
+    }
+    
+    .footer__contacto {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__categorias {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+        color: black;
+    }
+    
+    .footer__categorias a {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .footer__categorias a:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    .footer__redes {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__redes__iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
+        font-size: 18px;
+        margin-right: 10px;
+        color: #52734d;
+    }
+    
+    .fa-facebook-f, .fa-instagram, .fa-twitter {
+        font-size: 22px;
+        margin-right: 16px;
+        color: #448AFF;
+    }
+ 
+}
+
+/* Desktop */
+
+@media (min-width: 769px) {
+
+          /* 760px header */
+        
+          .fa-bars {
+            display: none;
+        }
+    
+        .header {
+            max-height: 16vh;
+        }
+    
+        .header__main {
+            display: flex;
+            justify-content: space-between; /* para ocupar ambos extremos */
+          
+        }
+        
+        .header__main__left {
+            display: flex; /* junta logo y categorias */
+        }
+        
+        .header__main__logo {
+            width: 260px;
+            height: 260px;
+            position: relative;
+            z-index: 1;
+            top: -89px;
+            transition: all 0.4s;
+            left: 0%;
+        }
+        
+        .header__main__logo:hover {
+            width: 280px;
+            height: 270px;
+            top: -95px;
+        }
+        
+        
+        .header__main__leftnavbar {
+            display: flex;  /* ponemos horizontal las categorias */
+            padding: 5px 0;
+            font-size: 17px;
+            margin-left: 10px; /* separacion del logo */
+            list-style: none;
+            margin-top: 30px; 
+        }
+        
+        .header__main__rightnavbar {
+            display: flex; 
+            flex-direction: column; /* encolumnar carrito y registro */
+            padding: 5px 0;
+            font-size: 15px;
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .header__main__leftnavbar li {
+            margin-right: 45px;
+        }
+        
+        .header__main__rightnavbar li {
+            margin-bottom: 4px;
+        }
+        
+        .header__main__rightnavbar a, .header__main__leftnavbar a  {
+            color: #DCEDC8;
+            text-decoration-line: none;
+            transition: all 1s;
+            
+        }
+        
+        .header__main__rightnavbar a:hover, .header__main__leftnavbar a:hover {
+            background-color: ;
+            color: #DCEDC8;
+            font-size: 1.2em;
+        }
+
+
+        /* 760px main */
+        
+
+    .imagenArticulo:hover + .detalleArticulos {
+        opacity: 1;
+        background-color: rgba(39, 99, 69, 0.2);
+        width: 22vw;
+    }
+
+    .imagenArticulo:hover {
+        box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+        width: 22vw;
+    }
+
+.imagenArticulo, .detalleArticulos {
+    transition: all 0.4s;
+}
+
+    .main__section__lastvisit, .main__section__ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main__articulos *{
+        width: 20vw;
+    }
+
+    .detalleArticulos {
+        width: 20vw;
+    }
+    .fa-truck {
+        max-width: 3vw;
+    }
+ 
+}
+
+@media (min-width: 1200px) {
+    .fa-truck {
+        max-width: 2vw;
+    }
+ 
+
+}
+
