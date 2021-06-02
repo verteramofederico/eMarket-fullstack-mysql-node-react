@@ -1,11 +1,18 @@
 # grupo_10_GAFtextiles
 
+<<<<<<< HEAD
 Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables. 
+=======
+GAF Textiles es un distribuidor mayorista dedicado a la venta de indumentaria de trabajo y articulos de seguridad industrial. 
+>>>>>>> 0dda56f1c3ac522de56ac8e32b8fa6648d4bc3db
 
 Nuestros productos incluyen pantalones, camisas, remeras, buzos, camperas, chalecos térmicos, bermudas, calzados industriales, botas impermeables y articulos varios de seguridad industrial. 
 
 Nuestra audiencia son laboratorios, empesas de construccion, fabricas. 
 Ajustaremos nuestra oferta a ese publico proveyendo la mas alta calidad segun estandares internacionales, priorizando la seguridad y durabilidad en nuestros productos. 
+
+## Link a web 
+https://gaftextiles.herokuapp.com/
 
 ## Wireframe 
 Link donde se encuentra Wireframes del home y otras secciones importantes: 
@@ -44,3 +51,8 @@ https://trello.com/b/CK8np7d1/tablero-gaf
 Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
 Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programacion. 
+<<<<<<< HEAD
+=======
+
+Agustin Acuña Quelas. 27 años. Posadas, Misiones, Argentina. Lic. en Administracion.
+>>>>>>> 0dda56f1c3ac522de56ac8e32b8fa6648d4bc3db
