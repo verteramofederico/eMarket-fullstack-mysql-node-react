@@ -416,7 +416,7 @@ main {
             display: flex; 
             flex-direction: column; /* encolumnar carrito y registro */
             padding: 5px 0;
-            font-size: 15px;
+            font-size: 17px;
             list-style: none;
             margin-top: 10px;
         }
@@ -437,7 +437,7 @@ main {
         }
         
         .header__main__rightnavbar a:hover, .header__main__leftnavbar a:hover {
-            background-color: ;
+            background-color: 
             color: #DCEDC8;
             font-size: 1.2em;
         }

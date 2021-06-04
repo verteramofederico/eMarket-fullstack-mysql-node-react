@@ -1,0 +1,81 @@
+main {
+    padding-bottom: 20px;
+}
+
+
+.presentacion {
+    padding-top: 40px;
+    max-width: 85vw;
+}
+
+.presentacion__foto {
+    width: 85vw;
+    margin-left: 4vw ;
+}
+
+.presentacion__texto {
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 4vw;
+}
+
+.presentacion__parrafo {
+    padding-top: 20px;
+}
+
+
+.eleccion {
+  display: none;
+}
+
+/* Iconos footer */
+.fa-handshake, .fa-gift, .fa-credit-card  {
+    color:#03264C;
+    font-size: 2em;
+}
+
+
+@media (min-width: 769px) {
+
+
+    /* Main */
+
+    .presentacion {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 45px;
+    }
+    
+    .presentacion__texto {
+        display: flex;
+        flex-direction: column;
+        max-width: 30vw;
+    }
+    
+    .presentacion__foto {
+        max-width: 30vw;
+    }
+    
+    .presentacion__parrafo {
+        margin-top: 30px;
+    }
+
+.eleccion {
+    display: block;
+}
+
+.eleccion__motivos {
+    display: flex;
+    margin: 30px;
+}
+
+.eleccion h3 {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* cambio color iconos */
+.fa-handshake:hover, .fa-gift:hover, .fa-credit-card:hover   {
+    color: #39b54a;
+
+}
