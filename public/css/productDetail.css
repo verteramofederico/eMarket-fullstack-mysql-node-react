@@ -1,0 +1,53 @@
+.detail {
+    justify-content: center;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+.detail p {
+    font-size: 0.8em;
+}
+
+.detail__informacion * {
+    margin-top: 8px;
+}
+
+
+/* tablet en adelante */
+
+@media (min-width: 760px) {
+    main {
+        padding: 50px;
+    }
+    
+    .detail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .detail p {
+        max-width: 30vw;
+        font-size: 0.8em;
+    }
+    
+    .detail__informacion * {
+        margin-top: 14px;
+        margin-left: 40px;
+    }
+    
+    
+    .detail__img:hover {
+        box-shadow: 0 0 16px 0px rgba(20, 20, 20, .8);
+    }
+    
+    .detaill_informacion__formularios {
+        display: flex;
+        margin-left: -20px;
+    
+    }
+    }
+
+
+
