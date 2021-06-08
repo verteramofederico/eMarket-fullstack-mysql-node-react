@@ -15,3 +15,4 @@ app.get("/login", (req, res) => res.sendFile(path.join(__dirname, "views", "logi
 app.get("/register", (req, res) => res.sendFile(path.join(__dirname, "views", "register.html")))
 app.get("/nosotros", (req, res) => res.sendFile(path.join(__dirname, "views", "nosotros.html")))
 app.get("/productDetail", (req, res) => res.sendFile(path.join(__dirname, "views", "productDetail.html")))
+app.get("/productCar", (req, res) => res.sendFile(path.join(__dirname, "views", "productCar.html")))
