@@ -2,14 +2,22 @@
     justify-content: center;
     text-align: center;
     padding: 20px 5px;
+    background-color: white;
 }
 
 .detail p {
     font-size: 0.8em;
+    text-align: left;
 }
 
 .detail__informacion * {
     margin-top: 8px;
+}
+
+#fondo__precio {
+    font-weight: 300;
+    padding: 8px;
+    font-size: 1.3em;
 }
 
 
