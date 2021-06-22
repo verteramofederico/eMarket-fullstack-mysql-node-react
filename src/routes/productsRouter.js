@@ -8,6 +8,7 @@ const productsController = require("../controllers/productsController")
 // define rutas
 router.get("/productDetail", productsController.ProducDetail);
 router.get("/productCar", productsController.ProductCar);
+router.get("/productEdit", productsController.ProductEdit)
 
 // exporto
 module.exports = router; 
