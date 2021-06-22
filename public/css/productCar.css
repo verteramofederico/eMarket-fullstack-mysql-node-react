@@ -1,8 +1,10 @@
-.car {
-    padding: 60px;
-    width: 70vw;
-    height: 60vh;
-    background-color:whitesmoke;
-    margin: 20px auto;
- 
+.productCar__contenedor {
+    display: flex;
 }
+
+.productCar__detalles {
+    display: flex;
+}
+
+
+
