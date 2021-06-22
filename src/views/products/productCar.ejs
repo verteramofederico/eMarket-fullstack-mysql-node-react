@@ -14,11 +14,49 @@
 <!-- ------------------ MAIN ----------------- -->
 
     <main>
-        <br>
-            <section class="car">
-                <p>PENDIENTE</p>
+        <section class="productCar">
+            
+            <section class="productCar__contenedor">
+                    <h5 class="detail__informacion__titulo"> Traje de lluvia</h5>
+                    <h4 class="detail__informacion__precio"> <span id="fondo__precio" >$2500</span></h4>
+
+                        <section class="productCar__detalles" >
+                            <form id="productCar__detalles__color" action="/colors" method="POST">
+                                <label>Color:</label>
+                                <select name="color">
+                                <option value="#ff0000">Rojo</option>
+                                <option value="#00ff00">Verde</option>
+                                <option value="#0000ff">Azul</option>
+                                <option value="#770077">Morado</option>
+                                </select>
+                                </form>
+                            <form id="productCar__detalles__talle" action="/talles" method="POST">
+                                <label>Talle:</label>
+                                <select name="talles">
+                                <option value="#ff0000">S</option>
+                                <option value="#00ff00">M</option>
+                                <option value="#0000ff">L</option>
+                                <option value="#770077">XL</option>
+                                </select>
+                                </form>
+                                <div id="productCar__detalles__cantidad">
+                                    <label class="count">Cantidad</label>
+                                    <button class="menos" onclick="contadormenos()">-</button>
+                                    <input id="count" type="text" style="text-align: center; width: 30px;">
+                                    <button class="menos" onclick="contadormas()">+</button>
+                                </div>                            
+                        </section>
+                            
+
+                    
+                    
+                    
             </section>
-        <br>
+            <button class="detail__informacion__boton">Finalizar Compra</button>
+        </section>
+
+       
+
     </main>
 
     <!-- ---------------- FOOTER ----------------- -->
