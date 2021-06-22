@@ -7,6 +7,7 @@ const router = require("../routes/productsRouter")
 const productsController = {
     ProducDetail: (req, res) => res.render("products/productDetail"),
     ProductCar: (req, res) => res.render("products/productCar"),
+    ProductCreate: (req, res) => res.render("products/productCreate"),
     ProductEdit: (req, res) => res.render("products/productEdit")
     }
 
