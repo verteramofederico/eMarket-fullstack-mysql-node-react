@@ -2,6 +2,8 @@
 const path = require("path");
 const express = require("express");
 const app = express();
+const method = require('method-override'); // para put y delete. Requiere NPM I method-override
+
 
 // Configuración
 // app.use(express.static('public'));
