@@ -16,21 +16,18 @@
             </picture>
             
             <section class="detail__informacion">
-                    <h3 class="detail__informacion__titulo"> Traje de lluvia</h3>
+                    <h3 class="detail__informacion__titulo"><%= product.name %></h3>
                     <h4 class="detail__informacion__precio"> <span id="fondo__precio" >$2500</span></h4>
-                    <p class="detail_informacion_descripcion">Lorem, ipsum dolor sit amet 
-                        consectetur adipisicing elit. Dolor quaerat perferendis nostrum sed?
-                        Ea autem unde voluptatum quis perspiciatis, quaerat neque exercitationem
-                        officia nostrum, sint sunt cum temporibus facere corporis!</p>
+                    <p class="detail_informacion_descripcion"><%= product.description %></p>
 
                         <section class="detaill_informacion__formularios" >
                             <form class="detail__informacion__color" action="/colors" method="POST">
                                 <label>Color:</label>
                                 <select name="color">
-                                <option value="#ff0000">Rojo</option>
+                                <option value="#ff0000">Azul</option>
                                 <option value="#00ff00">Verde</option>
-                                <option value="#0000ff">Azul</option>
-                                <option value="#770077">Morado</option>
+                                <option value="#0000ff">Negro</option>
+                                <option value="#770077">Beige</option>
                                 </select>
                                 </form>
                             <form class="detail__informacion__talle" action="/talles" method="POST">
