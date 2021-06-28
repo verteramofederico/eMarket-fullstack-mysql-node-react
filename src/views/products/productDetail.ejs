@@ -10,16 +10,17 @@
 <!-- ------------------ MAIN ----------------- -->
 
     <main>
-        <section class="detail">
-            <picture class="detail__img">
-                <img src="/images/111121003-Traje-de-Lluvia-.campera.-300x300.jpg" alt="traje">
-            </picture>
-            
-            <section class="detail__informacion">
-                    <h3 class="detail__informacion__titulo"><%= product.name %></h3>
-                    <h4 class="detail__informacion__precio"> <span id="fondo__precio" >$2500</span></h4>
-                    <p class="detail_informacion_descripcion"><%= product.description %></p>
 
+            <% if (product != undefined) { %>
+                <section class="detail">
+                    <picture class="detail__img">
+                        <img src="/images/<%= product.image%>" alt="traje">
+                    </picture>
+                <section class="detail__informacion">
+                    <h3 class="detail__informacion__titulo"><%= product.name %> </h3>
+                    <h4 class="detail__informacion__precio"> <span id="fondo__precio" >$<%= product.price %> </span></h4>
+                    <h7 class="detail_informacion_descripcion"></h6><%= product.description %> </h7>
+    
                         <section class="detaill_informacion__formularios" >
                             <form class="detail__informacion__color" action="/colors" method="POST">
                                 <label>Color:</label>
@@ -46,14 +47,13 @@
                                 <input id="count" type="text" style="text-align: center; width: 30px;">
                                 <button class="menos" onclick="contadormas()">+</button>
                             </div>
-
+    
                     
                     <button class="detail__informacion__boton">Agregar al carrito</button>
                     
             </section>
         </section>
-
-       
+            <% } %>
 
     </main>
 

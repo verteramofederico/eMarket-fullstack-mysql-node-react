@@ -24,7 +24,8 @@ app.use(method("_method")) // ?_method=PUT
 const main = require ("./routes/mainRouter");
 app.use(main)
 const products = require ("./routes/productsRouter");
-app.use(products)
+app.use("/product",products)
 const users = require ("./routes/usersRouter");
-app.use(users)
+app.use("/user",users)
+
 

@@ -21,6 +21,8 @@ const productsController = require("../controllers/productsController")
 
 // define rutas
 //router.get("/productDetail", productsController.ProducDetail);
+
+//product index
 router.get("/:id", productsController.ProducDetail);
 router.get("/productCart", productsController.ProductCart);
 router.get("/productCreate", productsController.ProductCreate);

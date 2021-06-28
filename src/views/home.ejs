@@ -14,77 +14,35 @@
         <section>
             <h3 class="main__titulos">Productos destacados <a href="#"> ver más</a> </h3>
                 <div class="main__section__destacados">
-            <article id="art1" class="main__articulos">
-                <a href="<%= 2%>"><img class="imagenArticulo" src="images/camisa-de-trabajo_05A8787-300x300.jpeg" alt=""></a>
-                    
-                    <div class="detalleArticulos">   <i class="fas fa-truck"></i>  
-                    <p class="precio">$2.770</p>
-                    <h4 class="descripciones">Camisa de trabajo</h4>
-                        
+                    <% for( let i = 0; i < 4; i++ ) { %>
+                        <article id="art1" class="main__articulos">
+                            <a href="/product/<%= product[i].id %>"><img class="imagenArticulo" src="images/<%= product[i].image %>" alt=""></a>
+                                
+                                <div class="detalleArticulos">   <i class="fas fa-truck"></i>  
+                                <p class="precio"><%= product[i].price %> </p>
+                                <p class="descuentos"><%= product[i].discount %> </p>
+                                <h4 class="descripciones"><%= product[i].name %> </h4>
+                                </div>
+                        </article>
+                    <% } %>
                 </div>
-            </article>
-            <article id="art2" class="main__articulos">
-                <a href="productDetail">    <img class="imagenArticulo" src="images/calzado-P41FM-300x300.jpeg"></a>
-                    <div class="detalleArticulos">     <i class="fas fa-truck"></i>  
-                    <p class="precio">$3.000</p>
-                    <h4 class="descripciones">Zapato de seguridad</h4> </div>
-            </article>
-            <article id="art3" class="main__articulos">
-                <a href="productDetail">  <img class="imagenArticulo" src="images/bota-Jobmaster-nueva-300x300.jpeg" alt=""></a>
-                    <div class="detalleArticulos"> 
-                    <i class="fas fa-truck"></i>  
-                    <p class="precio">#1.500</p>
-                    <h4 class="descripciones">Bota de lluvia</h4> </div>
-            </article>
-            <article id="art4" class="main__articulos">
-                <a href="productDetail">    <img class="imagenArticulo" src="images/bermuda-cargo_05A9366-300x300.jpeg" alt=""></a>
-                    <div class="detalleArticulos">  
-                    <i class="fas fa-truck"></i>  
-                    <p class="precio">$3.200</p>
-                    <h4 class="descripciones">Bermuda cargo</h4> </div>
-            </article>
-        </div>
         </section>      
 
         <section> 
             <h3 class="main__titulos">Ofertas <a href="#"> ver más</a></h3>
-            <div class="main__section__ofertas">
-               <article id="art5" class="main__articulos">
-                <a href="productDetail">   <img class="imagenArticulo" src="images/134533008-Guante-Terrycloth-Industrial-Moteado-Pesado-300x300.jpeg" alt=""></a>
-                       <div class="detalleArticulos"> 
-                       <i class="fas fa-truck"></i>  
-                       <p class="precio">$2.770</p>
-                       <p class="descuentos">40% OFF</p>
-                       <h4 class="descripciones">Guantes de protección</h4> </div>
-               </article>
-               <article id="art6" class="main__articulos">
-                <a href="productDetail">   <img class="imagenArticulo" src="images/111121003-Traje-de-Lluvia-.campera.-300x300.jpg" alt=""></a>
-                       <div class="detalleArticulos"> 
-                       <i class="fas fa-truck"></i>  
-                       <p class="precio">$3.000</p>
-                       <p class="descuentos">20% off</p>
-                       <h4 class="descripciones">Traje de lluvia</h4> </div>
-               </article>
-
-               <article id="art7" class="main__articulos">
-                <a href="productDetail">  <img class="imagenArticulo" src="images/chaleco-canvas_05A9263.jpeg" alt=""></a>
-                       <div class="detalleArticulos">
-                       <i class="fas fa-truck"></i>  
-                       <p class="precio">#7.500</p>
-                       <p class="descuentos">10% off</p>
-                       <h4 class="descripciones">Chaleco</h4> </div> 
-               </article>
-               <article id="art8" class="main__articulos">
-                <a href="productDetail">  <img class="imagenArticulo" src="images/calzado-P41FM-300x300.jpeg" alt=""></a>
-                       <div class="detalleArticulos"> 
-                       <i class="fas fa-truck"></i>  
-                       <p class="precio">$2.200</p>
-                       <p class="descuentos">5% off</p>
-                       <h4 class="descripciones">Zapato de seguridad</h4> </div>
-               </article>
-           </div>
-   </section>
-
+                <div class="main__section__ofertas">
+                    <% for( let i = 4; i < 8; i++ ) { %>
+                        <article id="art1" class="main__articulos">
+                            <a href="/product/<%= product[i].id %>"><img class="imagenArticulo" src="images/<%= product[i].image %>" alt=""></a>
+                            
+                            <div class="detalleArticulos">   <i class="fas fa-truck"></i>  
+                            <p class="precio"><%= product[i].price %> </p>
+                            <p class="descuentos"><%= product[i].discount %></p>
+                            <h4 class="descripciones"><%= product[i].name %> </h4>
+                            </div>
+                        </article>
+                    <% } %>
+                </div>
         </section>
 
         <h1 class="main__h1"> GAF Textiles </h1>
@@ -95,8 +53,9 @@
             <img src="/images/ny-engel-safety.jpg" alt="">
         </picture>
 
-
     </main>
+
+    
 
     <!-- ---------------- FOOTER ----------------- -->
 
