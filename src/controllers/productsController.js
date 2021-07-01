@@ -14,7 +14,7 @@ const productsController = {
     ProductEdit: (req, res) => res.render("products/productEdit"),
     store: (req, res) => {
         let result = productModel.new(req.body,req.file)
-        return result == true ? res.redirect("products") : res.send("Error al cargar la informacion") 
+        return result == true ? res.redirect("create") : res.send("Error al cargar la informacion") 
     },
     update: (req, res) => {
         let result = productModel.edit(req.body,req.file,req.params.id)

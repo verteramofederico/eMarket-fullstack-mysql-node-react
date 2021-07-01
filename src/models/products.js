@@ -20,9 +20,9 @@ const model = {
             id: productos.length > 0 ? productos[productos.length -1].id + 1: 1,
             name: data.name,
             price: data.price,
-            description: description.price,
-            colors: data.colors.map(color => parseInt(color)),
-            size: parseInt(data.size),
+            description: data.description,
+            colors: data.color,
+            size: data.size,
             image: file.filename
         }    
         productos.push(nuevo)

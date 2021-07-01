@@ -24,8 +24,8 @@ router.get("/create", productsController.ProductCreate);
 router.get("/edit/:id", productsController.ProductEdit);
 router.get("/:id", productsController.ProducDetail);
 /* router.get("/cart", productsController.ProductCart); */
-router.post('/', [upload.single("image")], productsController.store); 
-router.put('/', [upload.single("image")], productsController.update); 
-router.delete('/:id', productsController.destroy); 
+router.post('/create', [upload.single("image")], productsController.store); 
+router.put('/update/:id', [upload.single("image")], productsController.update); 
+router.delete('/delete/:id', productsController.destroy); 
 
 module.exports = router; 
