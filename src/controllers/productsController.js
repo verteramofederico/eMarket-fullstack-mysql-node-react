@@ -9,7 +9,7 @@ const productModel = require("../models/products")
 
 const productsController = {
     ProducDetail: (req, res) => res.render("products/productDetail", {product:productModel.one(req.params.id)}),
-    ProductCart: (req, res) => res.render("products/productCart"),
+    /* ProductCart: (req, res) => res.render("products/productCart"), */
     ProductCreate: (req, res) => res.render("products/productCreate"),
     ProductEdit: (req, res) => res.render("products/productEdit"),
     store: (req, res) => {

@@ -19,18 +19,13 @@ const upload = multer({storage:dest});
 // traer el controller
 const productsController = require("../controllers/productsController")
 
-// define rutas
-//router.get("/productDetail", productsController.ProducDetail);
-
 //product index
+router.get("/create", productsController.ProductCreate);
+router.get("/edit/:id", productsController.ProductEdit);
 router.get("/:id", productsController.ProducDetail);
-router.get("/productCart", productsController.ProductCart);
-router.get("/productCreate", productsController.ProductCreate);
-router.get("/productEdit", productsController.ProductEdit);
+/* router.get("/cart", productsController.ProductCart); */
 router.post('/', [upload.single("image")], productsController.store); 
 router.put('/', [upload.single("image")], productsController.update); 
 router.delete('/:id', productsController.destroy); 
 
-
-// exporto
 module.exports = router; 
