@@ -23,20 +23,40 @@ const model = {
             description: data.description,
             colors: data.color,
             size: data.size,
-            image: file.filename
+            image: file.filename,
+            offer: data.offer,
+            outstanding: data.outstanding,
+            discount: data.discount
         }    
         productos.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;    
     },
-    edit: function (data,file,id) {
+    edit: function (data,id) {
         const directory = path.resolve(__dirname,"../data","products.json")
         let productos = this.all();
         productos.map(producto => {
             if(producto.id == id ){
                 producto.name = data.name,
-                producto.brand = parseInt(data.brand),
-                producto.colors = data.colors.map(color => parseInt(color)),
+                producto.price = data.price,
+                producto.description = data.description,
+                producto.colors = data.color,
+                producto.size = data.size,
+                producto.offer = data.offer 
+                producto.outstanding = data.outstanding,
+                producto.discount = data.discount
+                return producto
+            }
+            return producto
+        })
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
+        return true;
+    },
+    editImage: function (file,id) {
+        const directory = path.resolve(__dirname,"../data","products.json")
+        let productos = this.all();
+        productos.map(producto => {
+            if(producto.id == id ){
                 producto.image = file.filename
                 return producto
             }
@@ -44,6 +64,11 @@ const model = {
         })
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
+    },
+    search: function (id) {
+        let producto = this.all();
+        let resultado = producto.find(producto => producto.category == category)
+        return resultado
     },
     delete: function (id) {
         const directory = path.resolve(__dirname,"../data","products.json")

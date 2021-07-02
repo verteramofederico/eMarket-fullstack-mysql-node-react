@@ -20,7 +20,7 @@
 			<textarea name="description" id="description" class="form-input"></textarea>
 
             <label for="color" class="form-label">Color:</label>
-			<select name="color" id="color" class="form-input">
+			<select name="color" id="color" class="form-input" multiple>
             <option value="">Elegí</option>
 			<option value="negro">negro</option>
 			<option value="azul">azul</option>
@@ -50,6 +50,21 @@
 			<label for="image">image</label>
 			<input type="file" name="image" id="image" />
 			</fieldset>
+
+			<label for="offer" class="form-label">En oferta:</label>
+			<select name="offer" id="offer" class="form-input">
+			<option value=false>false</option>
+			<option value=true>true</option>
+			</select>
+
+			<label for="outstanding" class="form-label">Destacado</label>
+			<select name="outstanding" id="outstanding" class="form-input">
+			<option value=false>false</option>
+			<option value=true>true</option>
+			</select>
+
+			<label for="discount">Descuento</label>
+			<input type="number" id="discount" name="discount" placeholder="" class="form-input">
 
 			<button type="submit" class="guardar">Guardar producto</button>
         </form>

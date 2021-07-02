@@ -40,16 +40,16 @@
   },
   {
     "id": 4,
-    "name": "Bermuda Cargo",
-    "price": 2783,
-    "description": "Malignant neoplasm of mouth, unspecified",
+    "name": "dsadsdasd",
+    "price": "323232",
+    "description": "dssdfsfdd",
     "color": "Beige",
-    "size": "M",
     "category": "Otros",
     "image": "bermuda-cargo_05A9366-300x300.jpeg",
-    "offer": true,
-    "outstanding": true,
-    "discount": "11% OFF"
+    "offer": "false",
+    "outstanding": "false",
+    "discount": "20",
+    "colors": "azul"
   },
   {
     "id": 5,
@@ -102,5 +102,30 @@
     "offer": true,
     "outstanding": false,
     "discount": "19% OFF"
+  },
+  {
+    "id": 9,
+    "name": "Camisa Ombu",
+    "price": "1900",
+    "description": "Dkosok",
+    "colors": "negro",
+    "image": "image-1625180820566.jpg",
+    "offer": "false",
+    "outstanding": "false",
+    "discount": "20"
+  },
+  {
+    "id": 10,
+    "name": "Camisa Ombu",
+    "price": "1900",
+    "description": "Camisa",
+    "colors": [
+      "negro",
+      "azul"
+    ],
+    "image": "image-1625181515405.jpg",
+    "offer": "false",
+    "outstanding": "false",
+    "discount": "10"
   }
 ]
