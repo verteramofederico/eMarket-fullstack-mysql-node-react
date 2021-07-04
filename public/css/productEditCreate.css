@@ -14,3 +14,11 @@
 .formulario * {
     margin-bottom: 20px;
 }
+
+#borrar {
+    background-color: brown;
+    width: 20vw;
+    text-align: center;
+    margin: auto;
+    color:antiquewhite 
+}

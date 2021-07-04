@@ -20,6 +20,10 @@
     font-size: 1.3em;
 }
 
+.detail__img * {
+    max-height: 40vh;
+}
+
 
 /* tablet en adelante */
 

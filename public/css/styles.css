@@ -25,18 +25,18 @@ body {
 
 .header {
     background-color: #689F38;
-    padding: 10px;
-    max-height: 25vh;
+    padding: 5px;
+    height: 8vh;
 }
 
 .header__main__logo {
-    width: 40vw;
-    height: 28vh;
+    max-width: 240px;
+    max-height: 240px;
     position: relative;
     z-index: 1;
-    top: -59px;
+    top: -79px;
     transition: all 0.4s;
-    left: 33vw;
+    left: 0vw;
 }
 
 .header__main__leftnavbar, .header__main__rightnavbar {
@@ -45,15 +45,46 @@ body {
 
 .fa-bars {
     position: relative;
-    bottom: 110px;
+    top: -199px; 
     left: 46vw;
     z-index: 2;
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #DCEDC8;
     
 }
 
+/* Para imagen unicamente en mobile */
+
+@media (max-width: 500px) {
+
+    .header__main__logo {
+        max-width: 180px;
+        max-height: 180px;
+        top: -69px;
+        margin-left: -10px;
+    }
+
+    .fa-bars {
+        position: relative;
+        top: -179px; }
+    }
+
+    @media (max-width: 365px) {
+
+        .header__main__logo {
+            max-width: 140px;
+            max-height: 140px;
+            top: -54px;
+            margin-left: -10px;
+        }
+    
+        .fa-bars {
+            position: relative;
+            top: -146px; }
+        }
+    
+    
 /* ---------------  MAIN  ----------------- */
 
 main {
@@ -246,7 +277,6 @@ main {
         font-size: 22px;
         margin-right: 16px;
     }
- 
 }
 
 /* ------ Tablets -------- */
@@ -364,22 +394,25 @@ main {
 
 /* Desktop */
 
-@media (min-width: 769px) {
+@media (min-width: 965px) {
 
           /* 760px header */
         
-          .fa-bars {
+        .fa-bars {
             display: none;
         }
     
         .header {
-            max-height: 16vh;
+            height: 7vh;
+            position: fixed; 
+            top: 0; 
+            width: 100%;
+            z-index: 1;
         }
     
         .header__main {
             display: flex;
-            justify-content: space-between; /* para ocupar ambos extremos */
-          
+            justify-content: space-between; /* para ocupar ambos extremos */          
         }
         
         .header__main__left {
@@ -389,44 +422,39 @@ main {
         .header__main__logo {
             width: 260px;
             height: 260px;
-            position: relative;
-            z-index: 1;
-            top: -89px;
+            /* position: relative; */
+            /* z-index: 1; */
+            top: -102px;
             transition: all 0.4s;
             left: 0%;
         }
         
         .header__main__logo:hover {
-            width: 280px;
-            height: 270px;
-            top: -95px;
+            width: 265px;
+
         }
-        
-        
+                
         .header__main__leftnavbar {
             display: flex;  /* ponemos horizontal las categorias */
-            padding: 5px 0;
-            font-size: 17px;
-            margin-left: 10px; /* separacion del logo */
+            font-size: 16px;
+            margin-left: 2px; /* separacion del logo */
             list-style: none;
-            margin-top: 30px; 
+            margin-top: 10px; 
         }
         
         .header__main__rightnavbar {
-            display: flex; 
-            flex-direction: column; /* encolumnar carrito y registro */
-            padding: 5px 0;
-            font-size: 17px;
+            display: flex;  /* ponemos horizontal las categorias */
+            font-size: 16px;
             list-style: none;
-            margin-top: 10px;
+            margin-top: 10px; 
         }
         
         .header__main__leftnavbar li {
-            margin-right: 45px;
+            margin-right: 15px;
         }
         
         .header__main__rightnavbar li {
-            margin-bottom: 4px;
+            margin-right: 25px;
         }
         
         .header__main__rightnavbar a, .header__main__leftnavbar a  {
@@ -437,7 +465,6 @@ main {
         }
         
         .header__main__rightnavbar a:hover, .header__main__leftnavbar a:hover {
-            background-color: 
             color: #DCEDC8;
             font-size: 1.2em;
         }
@@ -486,6 +513,34 @@ main {
         max-width: 2vw;
     }
  
-
+    .header__main__logo {
+        width: 260px;
+        height: 260px;
+        top: -112px;
+        left: 0%;
+    }
+    
+            
+    .header__main__leftnavbar {
+        font-size: 17px;
+        margin-left: 10px; /* separacion del logo */
+        list-style: none;
+        margin-top: 10px; 
+    }
+    
+    .header__main__rightnavbar {
+        display: flex;  /* ponemos horizontal las categorias */
+        font-size: 17px;
+        list-style: none;
+        margin-top: 10px; 
+    }
+    
+    .header__main__leftnavbar li {
+        margin-right: 45px;
+    }
+    
+    .header__main__rightnavbar li {
+        margin-right: 25px;
+    }
 }
 
