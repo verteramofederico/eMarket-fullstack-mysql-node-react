@@ -52,22 +52,30 @@
 
 			<label for="offer" class="form-label">En oferta:</label>
 			<select name="offer" id="offer" class="form-input">
+			<option value="">Elegí</option>
 			<option value=false>false</option>
 			<option value=true>true</option>
 			</select>
 
 			<label for="outstanding" class="form-label">Destacado</label>
-			<select name="outstanding" id="outstanding" class="form-input">
+			<select name="outstanding" id="outstanding" class="form-input" >
+			<option value="">Elegí</option>
 			<option value=false>false</option>
 			<option value=true>true</option>
 			</select>
 
 			<label for="discount">Descuento</label>
-			<input type="number" id="discount" name="discount" placeholder="" class="form-input">
+			<input type="number" id="discount" name="discount" placeholder="<%= product.discount%>" class="form-input">
 		
 
 			<button type="submit" class="guardar">Guardar producto</button>
+			
         </form>
+
+		<form class="formulario" action="/product/delete/<%= product.id %>?_method=DELETE" method="post" >
+			<button type="submit" id="borrar">ELIMINAR Producto</button>
+		</form>
+
     </main>
 
 	

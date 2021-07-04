@@ -28,7 +28,7 @@ const productsController = {
     },
     destroy : (req, res) => {
         let result = productModel.delete(req.params.id);
-        return result == true ? res.redirect("/") : res.send("Error al cargar la informacion") 
+        return result == true ? res.redirect("../all") : res.send("Error al cargar la informacion") 
     }
     }
 

@@ -102,30 +102,5 @@
     "offer": true,
     "outstanding": false,
     "discount": "19% OFF"
-  },
-  {
-    "id": 9,
-    "name": "Camisa Ombu",
-    "price": "1900",
-    "description": "Dkosok",
-    "colors": "negro",
-    "image": "image-1625180820566.jpg",
-    "offer": "false",
-    "outstanding": "false",
-    "discount": "20"
-  },
-  {
-    "id": 10,
-    "name": "Camisa Ombu",
-    "price": "1900",
-    "description": "Camisa",
-    "colors": [
-      "negro",
-      "azul"
-    ],
-    "image": "image-1625181515405.jpg",
-    "offer": "false",
-    "outstanding": "false",
-    "discount": "10"
   }
 ]
