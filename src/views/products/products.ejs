@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include("../partials/head.ejs", {title: "GAF Textiles", cssDeseado:[""]}) %>
+    <%- include("../partials/head.ejs", {title: "Todos", cssDeseado:["all.css"]}) %>
 
     <!-- ------------- HEADER -------------- -->
 
@@ -12,15 +12,18 @@
         <img class="main__banner" src="/images/slide-1588432077184-8272420312-23c6ea96035afa50e9a0414b5395f8631588432079-1920-1920.jpeg" alt="">
 
         <section>
-            <p>FILTRAR POR</p>
-            <ul>
-                <li>Ropa de trabajo</li> <li>Seguridad</li> <li>Calzado</li> <li>Otros</li>
+            <p id="titulo">FILTRAR POR</p>
+            <ul id="category">
+                <li><a href="/product/all/ropa">ROPA DE TRABAJO</a></li> 
+                <li><a href="/product/all/seguridad">SEGURIDAD</a></li>
+                <li><a href="/product/all/calzado">CALZADO</a></li>
+                <li><a href="/product/all/otros">OTROS</a></li>
             </ul>
             <h3 class="main__titulos">TODOS LOS PRODUCTOS</h3>
                 <div class="main__section__destacados">
                     <% for( let i = 0; i < product.length ; i++ ) { %>
                         <article id="art1" class="main__articulos">
-                            <a href="/product/<%= product[i].id %>"><img class="imagenArticulo" src="../uploads/products/<%= product[i].image %>" alt=""></a>
+                            <a href="/product/<%= product[i].id %>"><img class="imagenArticulo" src="/uploads/products/<%= product[i].image %>" alt=""></a>
                                 
                                 <div class="detalleArticulos">   <i class="fas fa-truck"></i>  
                                 <p class="precio"><%= product[i].price %> </p>

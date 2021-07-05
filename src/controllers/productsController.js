@@ -8,7 +8,7 @@ const productModel = require("../models/products")
 // objeto literal con acciones para cada ruta
 
 const productsController = {
-    ProductAll: (req, res) => res.render("products/products", {product:productModel.all()}) ,
+    ProductAll: (req, res) => res.render("products/products", {product:req.params.category?productModel.filter(req.params.category):productModel.all()}) ,
     ProducDetail: (req, res) => res.render("products/productDetail", {product:productModel.one(req.params.id)}),
     /* ProductCart: (req, res) => res.render("products/productCart"), */
     ProductCreate: (req, res) => res.render("products/productCreate",),

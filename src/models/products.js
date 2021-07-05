@@ -67,7 +67,7 @@ const model = {
     },
     search: function (id) {
         let producto = this.all();
-        let resultado = producto.find(producto => producto.category == category)
+        let resultado = producto.find(producto => producto.id == id)
         return resultado
     },
     delete: function (id) {
@@ -80,7 +80,10 @@ const model = {
         productos = productos.filter(producto => producto.id != deleted.id )
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
-    }
-
-};
+    },
+    filter: function (category) {
+        let producto = this.all();
+        let resultado = producto.filter(producto => producto.category == category)
+        return resultado }
+}
 module.exports = model;
