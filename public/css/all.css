@@ -1,0 +1,24 @@
+#category {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: white;
+    font-size: 19px;
+    height: 25px;
+    margin-bottom: 50px;
+}
+
+#category a {
+    color: rgb(35, 82, 35);
+}
+
+* {
+    text-align: center;
+}
+
+
+
+#titulo {
+    padding: 40px 0 15px 0;
+    
+}

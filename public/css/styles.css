@@ -29,6 +29,10 @@ body {
     height: 8vh;
 }
 
+.header__main {
+    max-height: 25vh;
+}
+
 .header__main__logo {
     max-width: 240px;
     max-height: 240px;
@@ -134,6 +138,7 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 
 /* Propiedades de articulos en el Home: */
 
@@ -317,7 +322,7 @@ main {
         background-color: #8BC34A;
         display: flex;
         justify-content: space-between;
-        padding: 30px 8vw;
+        padding: 15px 8vw;
         max-height: 30vh;
     }
     
@@ -403,7 +408,7 @@ main {
         }
     
         .header {
-            height: 7vh;
+            height: 6vh;
             position: fixed; 
             top: 0; 
             width: 100%;
@@ -505,18 +510,16 @@ main {
     .fa-truck {
         max-width: 3vw;
     }
- 
 }
 
 @media (min-width: 1200px) {
     .fa-truck {
         max-width: 2vw;
     }
- 
     .header__main__logo {
         width: 260px;
         height: 260px;
-        top: -112px;
+        top: -100px;
         left: 0%;
     }
     
