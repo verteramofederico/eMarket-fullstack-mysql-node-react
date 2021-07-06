@@ -23,3 +23,15 @@
     margin: auto;
     color:antiquewhite 
 }
+
+#colorFlex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40vw;
+}
+
+.talleFlex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40vw;
+}
