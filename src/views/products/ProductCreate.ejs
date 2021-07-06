@@ -19,16 +19,41 @@
             <label for="description" class="form-label">Descipción:</label>
 			<textarea name="description" id="description" class="form-input"></textarea>
 
-            <label for="color" class="form-label">Color:</label>
+            <!-- <label for="color" class="form-label">Color:</label>
 			<select name="color" id="color" class="form-input" multiple>
             <option value="">Elegí</option>
 			<option value="negro">negro</option>
 			<option value="azul">azul</option>
 			<option value="verde">verde</option>
             <option value="beige">beige</option>
-			</select>
+			</select> -->
 
-            <label for="talle" class="form-label">talle:</label>
+			<label for="color">Color:</label>
+			<div id="colorFlex">
+            <label><input type="checkbox" name="color" value="negro"> negro</label>
+            <label><input type="checkbox" name="color" value="azul"> azul</label>
+            <label><input type="checkbox" name="color" value="verde"> verde</label>
+			<label><input type="checkbox" name="color" value="beige"> beige</label> 
+			</div>   
+
+			<label for="talle" >talle:</label>
+			<div class="talleFlex">
+            <label><input type="checkbox" name="size" value="s">S</label>
+            <label><input type="checkbox" name="size" value="m">M</label>
+            <label><input type="checkbox" name="size" value="l">L</label>
+			<label><input type="checkbox" name="size" value="xl">XL</label> 
+			</div>
+			<div class="talleFlex">
+				<label><input type="checkbox" name="size" value="38">38</label>
+				<label><input type="checkbox" name="size" value="39">39</label>
+				<label><input type="checkbox" name="size" value="40">40</label>
+				<label><input type="checkbox" name="size" value="41">41</label> 
+				<label><input type="checkbox" name="size" value="42">42</label>
+				<label><input type="checkbox" name="size" value="43">43</label> 
+				<label><input type="checkbox" name="size" value="44">44</label> 
+			</div>      
+
+            <!-- <label for="talle" class="form-label">talle:</label>
 			<select name="talle" id="size" class="form-input" multiple>
             <option value="">Elegí</option>
 			<option value="s">s</option>
@@ -39,7 +64,27 @@
 			<option value="40">40</option>
 			<option value="41">41</option>
 			<option value="42">42</option>
-			</select>
+			</select> -->
+
+			<!-- <fieldset>
+				<label for="talle" class="form-label">talle:</label>
+				<select value=<%= //product.category %>>
+					<% //if (product.category =="calzado") { %>
+						<option value="38">38</option>
+						<option value="39">39</option>
+						<option value="40">40</option>
+						<option value="41">41</option>
+						<option value="42">42</option>
+					<%// } %>
+					<% //if (product.category =="ropa") { %>
+						<option value="s">s</option>
+						<option value="m">m</option>
+						<option value="l">l</option>
+						<option value="xl">xl</option>
+						<option value="xxl">xxl</option>
+					<%// } %>
+				</select>
+			</fieldset> -->
 
 			<label for="category" class="form-label">Categoría:</label>
 			<select name="category" id="category" class="form-input">
@@ -66,6 +111,7 @@
 			<option value=false>false</option>
 			<option value=true>true</option>
 			</select>
+
 
 			<label for="discount">Descuento</label>
 			<input type="number" id="discount" name="discount" placeholder="" class="form-input">

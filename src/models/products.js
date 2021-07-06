@@ -23,7 +23,7 @@ const model = {
             description: data.description,
             colors: data.color,
             size: data.size,
-            image: file.filename,
+            image: file.filename ? file.filename: "defaultProduct.png",
             offer: data.offer,
             outstanding: data.outstanding,
             discount: data.discount

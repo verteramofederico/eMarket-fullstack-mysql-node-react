@@ -102,5 +102,23 @@
     "offer": true,
     "outstanding": false,
     "discount": "19% OFF"
+  },
+  {
+    "id": 9,
+    "name": "Camisa Ombu",
+    "price": "1900",
+    "description": "dfsfdfdfds",
+    "colors": [
+      "negro",
+      "verde"
+    ],
+    "size": [
+      "m",
+      "l"
+    ],
+    "image": "image-1625599159949.jpeg",
+    "offer": "true",
+    "outstanding": "true",
+    "discount": "20"
   }
 ]

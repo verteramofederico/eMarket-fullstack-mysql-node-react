@@ -6,7 +6,7 @@ const path = require('path');
 let dest = multer.diskStorage({
     destination: function (req, file, cb) {
         let extension = path.extname(file.originalname);
-        if(extension.indexOf("jpg") || extension.indexOf("jpeg") > 0){
+        if(extension.indexOf("jpg") || extension.indexOf("jpeg") || extension.indexOf("png") > 0){
             cb(null, path.resolve(__dirname,"../../public/uploads","products"))
         }
     },
