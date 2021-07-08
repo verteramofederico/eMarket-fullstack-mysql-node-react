@@ -1,3 +1,20 @@
+# weekly sprint 4
+
+### Tareas compleatadas:
+
+-user.json
+-products.json
+-modelo products
+-funcion eliminar
+-funcion creacion
+-funcion edicion 
+-listar todos los productos
+-filtar productos por categoria
+
+### Impedimientos
+- nos encontramos con serios problemas al intentar separar el json de products en sub-jsons.
+
+
 # weekly sprint 3
 
 ### Tareas compleatadas:
