@@ -14,13 +14,13 @@
 			
 						
             <label for="price" class="form-label">Precio del producto:</label>
-			<input type="text" id="price" name="price" value="<%= product.price %> " class="form-input">
+			<input type="text" id="price" name="price" value="<%= product.price %> " >
 
             <label for="description" class="form-label">Descipción:</label>
-			<textarea name="description" placeholder="<%= product.description %> " id="description" class="form-input"></textarea>
+			<textarea name="description" placeholder="<%= product.description %> " id="description" value="<%= product.description %>"></textarea>
 
-            <label for="color" class="form-label">Color:</label>
-			<select name="color" id="color" value="<%= product.color %>" class="form-input" multiple>
+            <label for="color"> Color:</label>
+			<select name="color" id="color" value="<%= product.colors %>"  multiple>
             <option value="">Elegí</option>
 			<option value="negro">negro</option>
 			<option value="azul">azul</option>
@@ -28,9 +28,10 @@
             <option value="beige">beige</option>
 			</select>
 
-            <label for="talle" class="form-label">talle:</label>
-			<select name="talle" id="size" value="<%= product.size %>" class="form-input" multiple>
+            <label for="talle" >talle:</label>
+			<select name="size" id="size" value="<%= product.size %>" multiple>
             <option value="">Elegí</option>
+			<option value="1">Unico</option>
 			<option value="s">s</option>
 			<option value="m">m</option>
 			<option value="l">l</option>
@@ -42,7 +43,7 @@
 			</select>
 
 			<label for="category" class="form-label">Categoría:</label>
-			<select name="category" id="category" class="form-input">
+			<select name="category" id="category" >
 			<option value="">Elegí</option>
 			<option value="ropa">Ropa de trabajo</option>
 			<option value="calzado">Calzado</option>
@@ -55,14 +56,14 @@
 			<a href="/product/EditImage/<%=product.id%>">Editar imagen</a>
 
 			<label for="offer" class="form-label">En oferta:</label>
-			<select name="offer" id="offer" class="form-input">
+			<select name="offer" id="offer">
 			<option value="">Elegí</option>
 			<option value=false>false</option>
 			<option value=true>true</option>
 			</select>
 
 			<label for="outstanding" class="form-label">Destacado</label>
-			<select name="outstanding" id="outstanding" class="form-input" >
+			<select name="outstanding" id="outstanding" >
 			<option value="">Elegí</option>
 			<option value=false>false</option>
 			<option value=true>true</option>

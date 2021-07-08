@@ -25,19 +25,17 @@
                             <form class="detail__informacion__color" action="/colors" method="POST">
                                 <label>Color:</label>
                                 <select name="color">
-                                <option value="#ff0000">Azul</option>
-                                <option value="#00ff00">Verde</option>
-                                <option value="#0000ff">Negro</option>
-                                <option value="#770077">Beige</option>
+                                    <% for( let i = 0; i < product.colors.length; i++ ) { %>
+                                    <option value="<% product.colors[i]%>"><%=product.colors[i]%> </option>
+                                    <% } %>
                                 </select>
                                 </form>
                             <form class="detail__informacion__talle" action="/talles" method="POST">
                                 <label>Talle:</label>
                                 <select name="talles">
-                                <option value="#ff0000">S</option>
-                                <option value="#00ff00">M</option>
-                                <option value="#0000ff">L</option>
-                                <option value="#770077">XL</option>
+                                    <% for( let i = 0; i < product.size.length; i++ ) { %>
+                                        <option value="<% product.size[i]%>"><%=product.size[i]%> </option>
+                                        <% } %>
                                 </select>
                                 </form>
                         </section>

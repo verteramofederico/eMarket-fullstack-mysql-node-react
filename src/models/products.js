@@ -23,6 +23,7 @@ const model = {
             description: data.description,
             colors: data.color,
             size: data.size,
+            category: data.category,
             image: file.filename ? file.filename: "defaultProduct.png",
             offer: data.offer,
             outstanding: data.outstanding,
@@ -39,9 +40,10 @@ const model = {
             if(producto.id == id ){
                 producto.name = data.name,
                 producto.price = data.price,
-                producto.description = data.description,
+                producto.description = data.description ? data.description : producto.description,
                 producto.colors = data.color,
                 producto.size = data.size,
+                producto.category = data.category,
                 producto.offer = data.offer 
                 producto.outstanding = data.outstanding,
                 producto.discount = data.discount
