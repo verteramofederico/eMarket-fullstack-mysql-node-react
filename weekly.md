@@ -1,3 +1,26 @@
+# weekly sprint 4
+
+### Semana 1 Tareas compleatadas:
+
+-user.json
+-products.json
+-modelo products
+-funcion eliminar
+-funcion creacion
+
+### Impedimientos
+- nos encontramos con serios problemas al intentar separar el json de products en sub-jsons.
+
+### Semana 2 Tareas compleatadas:
+
+-funcion edicion 
+-listar todos los productos
+-filtar productos por categoria
+
+### Impedimientos
+- no funciona funcion de cargar imagen default
+
+
 # weekly sprint 3
 
 ### Tareas compleatadas:
