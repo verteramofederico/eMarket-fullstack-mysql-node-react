@@ -62,6 +62,13 @@
     background-color: #0022AA;
 }
 
+.invalido {
+    border: red;
+}
+
+.textoError {
+    color: red;
+}
 
 
 @media (min-width: 499px) {
