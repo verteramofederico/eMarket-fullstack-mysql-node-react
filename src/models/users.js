@@ -34,11 +34,11 @@ const User = {
 		return userFound;
 	},
 
-	create: function (userData, file) {
+	create: function (userData) {
 		let allUsers = this.findAll();
 		let newUser = {
 			id: this.generateId(),
-			...userData, image: file.filename
+			...userData
 		}
 		allUsers.push(newUser);
 		fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null,  ' '));

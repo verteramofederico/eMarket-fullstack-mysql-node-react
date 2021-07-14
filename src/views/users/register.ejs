@@ -20,38 +20,49 @@
             <input 
             type="text" 
             name="nombre"  
-            <% if (locals.errors && errors.nombre) { %>
-                class="invalido"
-            <% } %>
-            placeholder="Nombre y Apellido"
-            value=" <%= locals.oldData ? oldData.name : null %>" >
+            
+            <% if (locals.oldData && oldData.nombre) { %>
+                value="<%= oldData.nombre%>"
+            <% } else { %> placeholder="Nombre y Apellido"  <% } %>
 
             <% if (locals.errors && errors.nombre) { %>
-                <div class="textoError"> 
+                class="invalido"
+            <% } %>          
+            >
+
+            <% if (locals.errors && errors.nombre) { %>
+                <div class="textoError"></div>
                     <%= errors.nombre.msg %> 
                 </div>
             <% } %>
 
-            <input type="email" name="usuario"
-            <% if (locals.errors && errors.nombre) { %>
-                class="invalido"
-            <% } %> placeholder="Email@"
-            value=" <%= locals.oldData ? oldData.name : null %>">
 
-            <% if (locals.errors && errors.usuario) { %>
-                <div class="textoError"></div>> 
-                    <%= errors.usuario.msg %> 
+            <input type="text" name="email"
+            <% if (locals.oldData && oldData.email) { %>
+                value="<%= oldData.email%>"
+            <% } else { %> placeholder="Email"  <% } %>
+
+            <% if (locals.errors && errors.email) { %>
+                class="invalido"
+            <% } %>          
+            >
+            <% if (locals.errors && errors.email) { %>
+                <div class="textoError"></div>
+                    <%= errors.email.msg %> 
                 </div>
             <% } %>
 
-            <input type="text" name="domicilio"<% if (locals.errors && errors.nombre) { %>
-                class="invalido"
-            <% } %>
-            placeholder="Domicilio"
-            value=" <%= locals.oldData ? oldData.name : null %>" >
+            <input type="text" name="domicilio"
+            <% if (locals.oldData && oldData.domicilio) { %>
+                value="<%= oldData.domicilio%>"
+            <% } else { %> placeholder="Domicilio"  <% } %>
 
             <% if (locals.errors && errors.domicilio) { %>
-                <div class="textoError"></div>> 
+                class="invalido"
+            <% } %> >    
+
+            <% if (locals.errors && errors.domicilio) { %>
+                <div class="textoError"></div>
                     <%= errors.domicilio.msg %> 
                 </div>
             <% } %>
@@ -62,37 +73,33 @@
             </fieldset>
 
             <% if (locals.errors && errors.image) { %>
-                <div class="textoError"></div>> 
+                <div class="textoError"></div>
                     <%= errors.image.msg %> 
                 </div>
             <% } %>
 
-            <label class="intereses" <% if (locals.errors && errors.nombre) { %>
+            <input type="password" name="password" placeholder="Contraseña" 
+            <% if (locals.errors && errors.password) { %>
                 class="invalido"
-            <% } %> for="interes">Intereses</label>
+            <% } %>>
+            <% if (locals.errors && errors.password) { %>
+                <div class="textoError"></div>
+                    <%= errors.password.msg %> 
+                </div>
+            <% } %>
+
+            <label class="intereses" for="interes">Intereses</label>
             <div class="intereses__opciones">
             <label><input type="checkbox" name="interes" value="Construccion"> Construccion</label>
             <label><input type="checkbox" name="interes" value="Sanitario"> Sanitario</label>
             <label><input type="checkbox" name="interes" value="Jardineria"> Jardineria</label>  
             <label><input type="checkbox" name="interes" value="Otros"> Otros</label>
             </div>
-            <% if (locals.errors && errors.intereses) { %>
-                <div class="textoError"></div>> 
-                    <%= errors.intereses.msg %> 
-                </div>
-            <% } %>
 
-            <input type="password"  placeholder="Contraseña">
-            <input type="password"  placeholder="Confirmar Contraseña">
-            <% if (locals.errors && errors.password) { %>
-                <div class="textoError"></div>> 
-                    <%= errors.password.msg %> 
-                </div>
-            <% } %>
-
-            <label><input type="checkbox" name="suscripcion" value="suscribe"> Deseo suscribirme a novedades</label>
+            
 
             <button class="botonEnviar" type="submit">enviar</button>
+            <label><input type="checkbox" name="suscripcion" value="suscribe"> Deseo suscribirme a novedades</label>
 
         </fieldset>
     </form>

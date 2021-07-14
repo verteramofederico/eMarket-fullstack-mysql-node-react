@@ -38,7 +38,7 @@
  {
   "id": 5,
   "nombre": "Juan Perez",
-  "usuario": "verteramo.federico@gmail.com",
+  "email": "verteramo.federico@gmail.com",
   "domicilio": "oskdfdk",
   "interes": "Construccion",
   "suscripcion": "suscribe"
@@ -46,8 +46,36 @@
  {
   "id": 6,
   "nombre": "",
-  "usuario": "verteramo.federico@gmail.com",
+  "email": "verteramo.federico@gmail.com",
   "domicilio": "",
   "image": "image-1626187168719.jpeg"
+ },
+ {
+  "id": 7,
+  "nombre": "fdfsdfds",
+  "email": "veotex@gmail.com",
+  "domicilio": " jsokaosdk",
+  "interes": "Sanitario",
+  "suscripcion": "suscribe",
+  "image": "image-1626275085108.jpeg"
+ },
+ {
+  "id": 8,
+  "nombre": "saddsdas",
+  "email": "dsadsadas@hotmail.com",
+  "domicilio": "dfsfdsdsf",
+  "interes": "Construccion",
+  "password": "$2a$10$.HaD.VG0ugZdg1Y.2pLRRuQXB7LYpUOVMWVwM04jxDY7vIb0nMYFu",
+  "suscripcion": "suscribe",
+  "image": "image-1626275340304.jpeg"
+ },
+ {
+  "id": 9,
+  "nombre": "dsdsds",
+  "email": "fsdofdok@gmail.com",
+  "domicilio": "fdsfds",
+  "interes": "Sanitario",
+  "password": "$2a$10$NhA49lBSo602XFYibbIs7.mIcyxG.QsmBOVk8F1A0jxkD3Mjr/kXe",
+  "image": "image-1626276005998.jpeg"
  }
 ]
