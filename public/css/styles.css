@@ -395,6 +395,7 @@ main {
 /* Desktop */
 
 @media (min-width: 965px) {
+    
 
           /* 760px header */
         
@@ -404,6 +405,7 @@ main {
     
         .header {
             height: 6vh;
+            max-height: 6vh;
             position: fixed; 
             top: 0; 
             width: 100%;
@@ -412,7 +414,8 @@ main {
     
         .header__main {
             display: flex;
-            justify-content: space-between; /* para ocupar ambos extremos */          
+            justify-content: space-between; /* para ocupar ambos extremos */ 
+            max-height: 6vh;         
         }
         
         .header__main__left {
