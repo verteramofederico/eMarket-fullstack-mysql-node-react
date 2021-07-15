@@ -1,6 +1,9 @@
 const path = require('path');
 const fs = require('fs');
 
+const colorModel = require('./color.js');
+const sizeModel = require('./size.js');
+
 const model = {
     all: function() {
         const directory = path.resolve(__dirname,"../data","products.json")
@@ -8,8 +11,25 @@ const model = {
         const convert = JSON.parse(file)
         return convert
     },
-    one: function (id) {
+    allWithExtra: function () {
         let productos = this.all();
+        productos.map(element => {
+            element.size = element.size.map(size => {
+                size = sizeModel.one(size)
+                return size
+            })
+            return element;
+        }).map(element => {
+            element.colors = element.colors.map(color => {
+                color = colorModel.one(color)
+                return color
+            })
+            return element
+        })
+        return productos; 
+    },    
+    one: function (id) {
+        let productos = this.allWithExtra();
         let resultado = productos.find(producto => producto.id == id)
         return resultado;
     },
@@ -21,13 +41,15 @@ const model = {
             name: data.name,
             price: data.price,
             description: data.description,
-            colors: data.color,
-            size: data.size,
+            /* colors: data.colors.lenght > 0 ? data.colors.map(color => parseInt(color)) : parseInt(data.colors) ,
+                size: data.size.lenght > 0 ? data.size.map(size => parseInt(size)) : parseInt(data.size) , */
+            colors: data.colors.lenght > 0 ? data.colors.map(color => parseInt(color)) : [parseInt(data.colors)],
+            size: data.size.lenght >0 ? data.size.map(size => parseInt(size)) : [parseInt(data.size)],
             category: data.category,
             image: file.filename,
             offer: data.offer,
             outstanding: data.outstanding,
-            discount: data.discount
+            discount: data.discount ? data.discount+"% OFF" : null
         }    
         productos.push(nuevo)
         fs.writeFileSync(directory,JSON.stringify(productos,null,2));
@@ -41,8 +63,8 @@ const model = {
                 producto.name = data.name,
                 producto.price = data.price,
                 producto.description = data.description ? data.description : producto.description,
-                producto.colors = data.color,
-                producto.size = data.size,
+                producto.colors = data.colors.map(color => parseInt(color)),
+                producto.size = parseInt(data.size),
                 producto.category = data.category,
                 producto.offer = data.offer 
                 producto.outstanding = data.outstanding,

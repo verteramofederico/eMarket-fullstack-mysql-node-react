@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Azul",
+        "value": "rgb(33, 150, 243, 0.7)"
+    },
+    {
+        "id": 2,
+        "name": "Negro",
+        "value": "rgb(76, 175, 80, 0.7)"
+    },
+    {
+        "id": 3,
+        "name": "Verde",
+        "value": "rgb(0, 0, 0, 0.7)"
+    },
+    {
+        "id": 4,
+        "name": "Beige",
+        "value": "rgb(245, 245, 190)"
+    }
+]

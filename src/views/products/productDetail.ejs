@@ -21,23 +21,33 @@
                     <h4 class="detail__informacion__precio"> <span id="fondo__precio" >$<%= product.price %> </span></h4>
                     <h7 class="detail_informacion_descripcion"></h6><%= product.description %> </h7>
     
-                        <section class="detaill_informacion__formularios" >
-                            <form class="detail__informacion__color" action="/colors" method="POST">
-                                <label>Color:</label>
-                                <select name="color">
-                                    <% for( let i = 0; i < product.colors.length; i++ ) { %>
-                                    <option value="<% product.colors[i]%>"><%=product.colors[i]%> </option>
-                                    <% } %>
-                                </select>
-                                </form>
-                            <form class="detail__informacion__talle" action="/talles" method="POST">
-                                <label>Talle:</label>
-                                <select name="talles">
-                                    <% for( let i = 0; i < product.size.length; i++ ) { %>
-                                        <option value="<% product.size[i]%>"><%=product.size[i]%> </option>
+
+                        <% if (product.colors) { %>
+                            <section class="detaill_informacion__formularios" >
+                                <form class="detail__informacion__color" action="/colors" method="POST">
+                                    <label>Color:</label>
+                                    <select name="color">
+                                        <% for( let i = 0; i < product.colors.length; i++ ) { %>
+                                        <option value="<% product.colors[i].name%>"><%=product.colors[i].name%> </option>
                                         <% } %>
-                                </select>
-                                </form>
+                                    </select>
+                                    </form>
+                        <% } %>
+
+                                <% if (product.size) { %>
+                                    <form class="detail__informacion__talle" action="/talles" method="POST">
+                                        <label>Talle:</label>
+                                        <select name="talles">
+                                            ejsif
+                                            <% for( let i = 0; i < product.size.length; i++ ) { %>
+                                                <option value="<% product.size[i].name%>"><%=product.size[i].name%> </option>
+                                                <% } %>
+                                        </select>
+                                        </form>
+                                <% } %>
+
+                                <% console.log(product) %> 
+                            
                         </section>
                             <div class="cant">
                                 <label class="count">Cantidad</label>

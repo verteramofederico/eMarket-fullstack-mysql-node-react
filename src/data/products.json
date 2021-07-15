@@ -4,8 +4,14 @@
     "name": "Camisa de trabajo",
     "price": 4471,
     "description": "Inj blood vessel of left middle finger, init encntr",
-    "colors": "Negro",
-    "size": "XL",
+    "colors": [
+      3,
+      1
+    ],
+    "size": [
+      3,
+      4
+    ],
     "category": "ropa",
     "image": "camisa-de-trabajo_05A8787-300x300.jpeg",
     "offer": false,
@@ -17,8 +23,14 @@
     "name": "Zapato de seguridad",
     "price": 3314,
     "description": "Poisoning by antihyperlip and antiarterio drugs, acc, subs",
-    "colors": "Verde",
-    "size": ["S"],
+    "colors": [
+      2,
+      4
+    ],
+    "size": [
+      3,
+      4
+    ],
     "category": "seguridad",
     "image": "calzado-P41FM-300x300.jpeg",
     "offer": true,
@@ -30,8 +42,15 @@
     "name": "Bota de lluvia",
     "price": 1845,
     "description": "Sltr-haris Type I physl fx upr end l fibula, 7thD",
-    "colors": "Azul",
-    "size": ["L"],
+    "colors": [
+      1,
+      4,
+      2
+    ],
+    "size": [
+      3,
+      4
+    ],
     "category": "calzado",
     "image": "bota-Jobmaster-nueva-300x300.jpeg",
     "offer": false,
@@ -43,7 +62,14 @@
     "name": "Bermuda Cargo",
     "price": "2330",
     "description": "Bermuda cargoosdoisdiodsodsisd",
-    "colors": "azul",
+    "colors": [
+      4,
+      1
+    ],
+    "size": [
+      3,
+      4
+    ],
     "category": "ropa",
     "image": "bermuda-cargo_05A9366-300x300.jpeg",
     "offer": "false",
@@ -55,8 +81,14 @@
     "name": "Guantes de proteccion",
     "price": 5398,
     "description": "Nondisp fx of proximal phalanx of left little finger, init",
-    "colors": "Negro",
-    "size": ["S"],
+    "colors": [
+      3,
+      2
+    ],
+    "size": [
+      3,
+      4
+    ],
     "category": "ropa",
     "image": "134533008-Guante-Terrycloth-Industrial-Moteado-Pesado-300x300.jpeg",
     "offer": true,
@@ -68,8 +100,13 @@
     "name": "Traje de lluvia",
     "price": 1769,
     "description": "Prsn brd/alit a car injured in clsn w pick-up truck, subs",
-    "colors": "Verde",
-    "size": ["M"],
+    "colors": [
+      2
+    ],
+    "size": [
+      2,
+      2
+    ],
     "category": "calzado",
     "image": "111121003-Traje-de-Lluvia-.campera.-300x300.jpg",
     "offer": true,
@@ -81,8 +118,14 @@
     "name": "Chaleco",
     "price": 3076,
     "description": "Chaleco con 6 bolsillos",
-    "colors": "Azul",
-    "size": ["L"],
+    "colors": [
+      1,
+      2
+    ],
+    "size": [
+      3,
+      4
+    ],
     "category": "ropa",
     "image": "chaleco-canvas_05A9263.jpeg",
     "offer": true,
@@ -94,45 +137,18 @@
     "name": "Zapato de seguridad",
     "price": 5200,
     "description": "Zapato de seguridad",
-    "colors": "Beige",
+    "colors": [
+      3,
+      1
+    ],
     "size": [
-      "s",
-      "l",
-      "m",
-      "xl"
+      3,
+      4
     ],
     "category": "calzado",
     "image": "calzado-P41FM-300x300.jpeg",
     "offer": true,
     "outstanding": false,
     "discount": "19% OFF"
-  },
-  {
-    "id": 10,
-    "name": "Camisa Ombu      ",
-    "price": "1900      ",
-    "description": "Camisa Ombu",
-    "category": "",
-    "image": "image-1625753739622.jpeg",
-    "offer": "",
-    "outstanding": "",
-    "discount": "",
-    "size": [
-      "s",
-      "m"
-    ]
-  },
-  {
-    "id": 11,
-    "name": "Camisa Ombu  ",
-    "price": "32231  ",
-    "description": "sdffdsdfsdfs",
-    "colors": "beige",
-    "size": "38",
-    "category": "",
-    "image": "image-1625755503404.jpeg",
-    "offer": "",
-    "outstanding": "",
-    "discount": ""
   }
 ]
