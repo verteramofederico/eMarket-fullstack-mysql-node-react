@@ -7,9 +7,37 @@ const { validationResult } = require('express-validator');
 // objeto literal con acciones para cada ruta
 
 const userModel = require("../models/users");
+const session = require("express-session");
 
 const usersController = {
-    login: (req, res) => res.render("users/login"),
+    login: (req,res) =>
+        res.render("users/login"),
+    loginProcess: (req, res) => {
+        let userToLogin = userModel.findByField("email", req.body.usuario);
+        if (userToLogin) {
+            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password )
+            if (passwordOk) {
+                delete userToLogin.password
+                req.session.userLogged = userToLogin
+                return res.redirect("/user/profile")
+            }
+            return res.render("users/login", {
+                errors: {
+                    usuario: {
+                        msg: "Las credenciales son invalidas"
+                    }
+                }
+            })
+    
+        }
+        return res.render("users/login", {
+            errors: {
+                usuario: {
+                    msg: "Usuario no encontrado. Por favor vuelva a intentarlo o registrese."
+                }
+            }
+        })
+    },
     register: (req, res) => res.render("users/register"),
 
     store: (req, res) => {
@@ -42,6 +70,11 @@ const usersController = {
 
         let userCreated = userModel.create(userToCreate);
         return res.redirect("/user/login") 
+    },
+    profile: (req, res) => {
+        return res.render("users/userProfile", {
+            user: req.session.userLogged
+        })
     }
     }
 

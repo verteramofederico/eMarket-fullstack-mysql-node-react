@@ -1,6 +1,7 @@
 // Módulos
 const path = require("path");
 const express = require("express");
+const session = require("express-session");
 const app = express();
 const method = require('method-override'); // para put y delete. Requiere NPM I method-override
 
@@ -10,6 +11,11 @@ app.listen(app.get("port"), () => console.log("Server Start in http://localhost:
 
 // Configuración
 app.use(express.static(path.resolve(__dirname,"../public")));
+app.use(session({
+	secret: "mensaje secreto aleatorio",
+	resave: false,
+	saveUninitialized: false,
+}));
 
 // Set view Engine. express reconoce ejs)
 app.set("view engine", "ejs");

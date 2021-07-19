@@ -16,6 +16,8 @@ const usersController = require("../controllers/usersControllers")
 router.get("/login", usersController.login); 
 router.get("/register", usersController.register);
 router.post('/create', uploadFile.single("image"),validations, usersController.store);
+router.post("/login", usersController.loginProcess); 
+router.get("/profile/", usersController.profile);
 
 // exporto
 module.exports = router; 

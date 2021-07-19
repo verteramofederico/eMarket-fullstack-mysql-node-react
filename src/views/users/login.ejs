@@ -15,11 +15,18 @@
 
 
 
-    <form action="/" method="POST" enctype="multipart/form-data">
+    <form action="/user/login" method="POST" >
         <fieldset class="formulario__field">
 
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" minlength="4" required>
-            <input type="password" placeholder="Password" minlength="4" required>
+            <input type="text" name="usuario" placeholder="Nombre de usuario" >
+
+            <% if (locals.errors && errors.usuario) { %>
+                <div class="textoError"> <p>
+                    <%= errors.usuario.msg %> </p> 
+                </div>
+            <% } %>
+
+            <input type="password" name="password" placeholder="Password" >
             <p class="olvido">¿Olvidaste tu contraseña?</p>
             <label><input type="checkbox" name="recordar" value="recordar"> Deseo recordar mi contraseña</label>
             <button class="botonEnviar" type="submit">Enviar</button>
