@@ -4,6 +4,9 @@ const express = require("express");
 const session = require("express-session");
 const app = express();
 const method = require('method-override'); // para put y delete. Requiere NPM I method-override
+const cookies = require('cookie-parser');
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // Server
 app.set("port", process.env.PORT ||3000)
@@ -16,6 +19,11 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
 }));
+
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
+
 
 // Set view Engine. express reconoce ejs)
 app.set("view engine", "ejs");

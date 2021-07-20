@@ -19,8 +19,16 @@
 
         <nav>
             <ul class="header__main__rightnavbar">
-                <li><a href="/user/register"><i class="fas fa-user"></i> Crea tu cuenta </a></li>
+                <% if (locals.isLogged) { %>
+
+                    <li><a href="/user/profile"><i class="fas fa-user"></i> Hola <%= locals.userLogged.nombre %>  </a></li>
+                    <li><a href="/user/logout"><i class="fas fa-sign-in-alt"></i> logout</a></li>
+				<% } else { %>
+
+                    <li><a href="/user/register"><i class="fas fa-user"></i> Crea tu cuenta </a></li>
                 <li><a href="/user/login"><i class="fas fa-sign-in-alt"></i> Ingresá</a></li>
+				<% } %>
+                
                 <li><a href="/product/productCart"><i class="fas fa-shopping-basket"></i> Carrito </a></li>    
             </ul>
         </nav>

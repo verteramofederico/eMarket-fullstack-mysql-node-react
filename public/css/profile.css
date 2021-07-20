@@ -1,0 +1,21 @@
+#nombre {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+#usuario {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#avatar {
+    margin-top: 6vh;
+    max-width: 30vw;
+    max-height: 30vh;
+    margin-left: 40vw;
+}
+
+main {
+    height: 80vh;
+}
+

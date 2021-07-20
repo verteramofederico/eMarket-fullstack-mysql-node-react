@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("../partials/head.ejs", {title: "Profile", cssDeseado:["login.css"] }) %>
+    <%- include("../partials/head.ejs", {title: "Profile", cssDeseado:["login.css", "profile.css"] }) %>
 <body>
 
     <!-- ------------- HEADER -------------- -->
@@ -12,9 +12,13 @@
 <main>
     <br>
     <div>
-        <h1>Bienvenido <%= user.nombre %> </h1>
-        <img src="/uploads/users/<%= user.image %> " alt="foto de usuario">
-        <p><%= user.usuario %> </p>
+
+            <h1 id="nombre">Bienvenido <%= user.nombre %> </h1>
+        <img id="avatar" src="/uploads/users/<%= user.image %> " alt="foto de usuario">
+        <p id="usuario"><%= user.email %> </p>
+
+        <a class="dropdown-item" href="/user/logout">Cerrar Sesion</a>
+        
 
     </div>
 </main>
