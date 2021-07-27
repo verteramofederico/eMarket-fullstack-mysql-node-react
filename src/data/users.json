@@ -17,5 +17,23 @@
   "interes": "Construccion",
   "suscripcion": "suscribe",
   "image": "image-1626717506161.jpeg"
+ },
+ {
+  "id": 3,
+  "nombre": "Burtecio Flores",
+  "email": "bubu@gmail.com",
+  "domicilio": "Paysandu 22",
+  "password": "$2a$10$YR8yDSB.wiRN43VWzbQf3OFtCcBEnTDZK4mnRfe44WKX1H8EzE9QS",
+  "interes": "Construccion",
+  "suscripcion": "suscribe",
+  "image": "image-1627422865643.jpeg"
+ },
+ {
+  "id": 4,
+  "nombre": "Administrador",
+  "email": "fede@gaf.com",
+  "domicilio": "Lorenzo 12",
+  "password": "$2a$10$GOzq3PqzqwaEgw.RBU2ly.oKy9wM4/XsTbD5XakPw6EW4QOElbNN6",
+  "image": "image-1627426128411.jpeg"
  }
 ]
