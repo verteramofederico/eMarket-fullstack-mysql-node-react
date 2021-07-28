@@ -10,6 +10,10 @@ Ajustaremos nuestra oferta a ese publico proveyendo la mas alta calidad segun es
 ## Link a web 
 https://gaftextiles.herokuapp.com/
 
+## Integrantes del equipo: 
+
+Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
+
 ## Wireframe 
 Link donde se encuentra Wireframes del home y otras secciones importantes: 
 https://www.figma.com/file/Qne4BeePVB47Zo2xLgQS1H/Figma-Basics?node-id=0%3A286 
@@ -42,10 +46,5 @@ Impecable y limpia funcionalidad.
 
 https://trello.com/b/CK8np7d1/tablero-gaf
 
-## Integrantes del equipo: 
 
-Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
 
-Guillermo Krieghoff. 32 años. CABA, Argentina. Primera experiencia en programacion. 
-
-Agustin Acuña Quelas. 27 años. Posadas, Misiones, Argentina. Lic. en Administracion.
