@@ -1,16 +1,6 @@
 # retro sprint 5
 
-### Empezar a hacer
-cargar datos reales
-
-### Dejar de hacer
-cambios a ultimo momento
-
-### Hacer menos
-cambios sin comentar motivos
-
-### Seguir haciendo
-mejora estetica web
+el grupo quedo de 1 integrante 
 
 ### Hacer más
 invitar a probar las funcionalidades a conocidos
