@@ -1,3 +1,7 @@
+# weekly sprint 5
+
+el grupo quedo de 1 integrante
+
 # weekly sprint 4
 
 ### Semana 1 Tareas compleatadas:
