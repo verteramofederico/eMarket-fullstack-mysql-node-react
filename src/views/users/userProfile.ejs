@@ -11,14 +11,19 @@
 
 <main>
     <br>
-    <div>
+    <div id="profile">
 
             <h1 id="nombre">Bienvenido <%= user.nombre %> </h1>
+            <p id="usuario"><%= user.email %> </p>
         <img id="avatar" src="/uploads/users/<%= user.image %> " alt="foto de usuario">
-        <p id="usuario"><%= user.email %> </p>
 
-        <a class="dropdown-item" href="/user/logout">Cerrar Sesion</a>
-        
+        <% if (user.interes) { %>
+            <p id="interes">Usted a seleccionado <%= user.interes %> como interes principal.</p>
+        <% } %>
+
+        <div id="cerrarSesion">
+            <a class="dropdown-item" href="/user/logout">Cerrar Sesion</a>
+        </div>
 
     </div>
 </main>

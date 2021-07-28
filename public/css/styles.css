@@ -1,6 +1,6 @@
 /* Palette  */
 
-.dark-primary-color    { background: #689F38; }
+.dark-primary-color    { background: hsl(92, 48%, 42%); }
 .default-primary-color { background: #8BC34A; }
 .light-primary-color   { background: #DCEDC8; }
 .text-primary-color    { color: #212121; }
@@ -202,83 +202,6 @@ main {
 }
 
 
-
-/* ---------------  FOOTER  ----------------- */
-
-/* Como la pagina se hizo primero en destokp hacemos una media para hacer el footer adaptado a telefono */
-
-@media (max-width: 499px) {
-    .footer {
-        background-color: #8BC34A;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 30px;
-    }
-    
-    .footer h3 {
-        margin-bottom: 10px;
-        color: #52734d;
-        font-size: 20px;
-        text-align: center; 
-    }
-    
-    .footer ul {
-        list-style: none;
-        font-size: 14px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    .footer__logo {
-        display: none;
-    }
-    
-    .footer__contacto {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 5px 0;
-    }
-    
-    .footer__categorias {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 5px 0;
-        color: black;
-    }
-    
-    .footer__categorias a {
-        color: black;
-        font-weight: 500;
-    }
-    
-    .footer__redes {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 5px 0;
-    }
-    
-    .footer__redes__iconos {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
-        font-size: 18px;
-        margin-right: 10px;
-        color: #52734d;
-    }
-    
-    .fa-facebook-f, .fa-instagram, .fa-twitter {
-        font-size: 22px;
-        margin-right: 16px;
-    }
-}
-
 /* ------ Tablets -------- */
 
 @media (min-width: 500px) {
@@ -311,85 +234,7 @@ main {
         max-width: 3vw;
     }
 
-    /* Tablet footer */
-
-    .footer {
-        background-color: #8BC34A;
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 8vw;
-        max-height: 30vh;
-    }
     
-    .footer h3 {
-        margin-bottom: 10px;
-        color: #52734d;
-        font-size: 20px; 
-    }
-    
-    .footer ul {
-        list-style: none;
-        font-size: 14px;
-    }
-    
-    .footer__logo {
-        max-width: 148px;
-        max-height: 138px;
-        position: relative;
-        bottom: 15px;
-        z-index: 1;
-    }
-    
-    .footer__contacto {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 5px 0;
-    }
-    
-    .footer__categorias {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 5px 0;
-        color: black;
-    }
-    
-    .footer__categorias a {
-        color: black;
-        font-weight: 500;
-    }
-    
-    .footer__categorias a:hover {
-        background-color: white;
-        color: black;
-    }
-    
-    .footer__redes {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        padding: 5px 0;
-    }
-    
-    .footer__redes__iconos {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
-        font-size: 18px;
-        margin-right: 10px;
-        color: #52734d;
-    }
-    
-    .fa-facebook-f, .fa-instagram, .fa-twitter {
-        font-size: 22px;
-        margin-right: 16px;
-        color: #448AFF;
-    }
- 
 }
 
 /* Desktop */
@@ -594,3 +439,330 @@ main {
     }
 }
 
+
+/* -----------  FOOTER --------------- */
+
+   .footer-distributed{
+    background-color: hsl(92, 41%, 36%);;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 5px;
+    max-height:30vh
+   }
+    
+   .footer-distributed .footer-left,
+   .footer-distributed .footer-center,
+   .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+   }
+    
+   .footer-distributed .footer-left{
+    width: 40%;
+   }
+    
+   .footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+   }
+    
+   .footer-distributed h3 span{
+    color:  #c4e91d;
+    font-weight: 900;
+   }
+    
+    
+   .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+   }
+    
+   .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+   }
+    
+   .footer-distributed .footer-company-name{
+    color:  #c4e91d;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+   }
+    
+    
+   .footer-distributed .footer-center{
+    width: 35%;
+   }
+    
+   .footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+   }
+    
+   .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+   }
+    
+   .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+   }
+    
+   .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+   }
+    
+   .footer-distributed .footer-center p a{
+    color:  #dde2eb;
+    text-decoration: none;;
+   }
+    
+   .footer-distributed .footer-right{
+    width: 20%;
+   }
+    
+   .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color: rgb(235, 236, 229);
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+   }
+    
+   .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+   }
+    
+   .footer-distributed .footer-icons{
+    margin-top: 25px;
+   }
+    
+   .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+    
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    
+    margin-right: 3px;
+    margin-bottom: 5px;
+   }
+    
+    
+   @media (max-width: 880px) {
+    
+    .footer-distributed{
+    font: bold 14px sans-serif;
+    
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    }
+    
+    .footer-distributed .footer-center i{
+    margin-left: 0;
+    }
+    .main {
+    line-height: normal;
+    font-size: auto;
+    }
+    
+   }
+
+
+
+
+
+
+
+
+/* ---------------  FOOTER eliminado  ----------------- */
+
+/* @media (max-width: 499px) {
+    .footer {
+        background-color: #8BC34A;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px;
+    }
+    
+    .footer h3 {
+        margin-bottom: 10px;
+        color: #52734d;
+        font-size: 20px;
+        text-align: center; 
+    }
+    
+    .footer ul {
+        list-style: none;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .footer__logo {
+        display: none;
+    }
+    
+    .footer__contacto {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__categorias {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+        color: black;
+    }
+    
+    .footer__categorias a {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .footer__redes {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__redes__iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
+        font-size: 18px;
+        margin-right: 10px;
+        color: #52734d;
+    }
+    
+    .fa-facebook-f, .fa-instagram, .fa-twitter {
+        font-size: 22px;
+        margin-right: 16px;
+    }
+    /* Tablet footer */
+
+    /* .footer {
+        background-color: #8BC34A;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 8vw;
+        max-height: 30vh;
+    }
+    
+    .footer h3 {
+        margin-bottom: 10px;
+        color: #52734d;
+        font-size: 20px; 
+    }
+    
+    .footer ul {
+        list-style: none;
+        font-size: 14px;
+    }
+    
+    .footer__logo {
+        max-width: 148px;
+        max-height: 138px;
+        position: relative;
+        bottom: 15px;
+        z-index: 1;
+    }
+    
+    .footer__contacto {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__categorias {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+        color: black;
+    }
+    
+    .footer__categorias a {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .footer__categorias a:hover {
+        background-color: white;
+        color: black;
+    }
+    
+    .footer__redes {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 5px 0;
+    }
+    
+    .footer__redes__iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .fa-whatsapp, .fa-phone-alt, .fa-at, .fa-map-marker-alt {
+        font-size: 18px;
+        margin-right: 10px;
+        color: #52734d;
+    }
+    
+    .fa-facebook-f, .fa-instagram, .fa-twitter {
+        font-size: 22px;
+        margin-right: 16px;
+        color: #448AFF;
+    }
+ 
+} */ 
