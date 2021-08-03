@@ -12,7 +12,8 @@ create table users (
     interes VARCHAR(100) NOT NULL,
     suscripcion VARCHAR(100) NOT NULL,
     image VARCHAR(100) NULL,
-    PRIMARY KEY (id) 
+    createdAt TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP NULL,
 );
 
 -- Tabla de intereses de usuarios
