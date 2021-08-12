@@ -7,16 +7,21 @@ module.exports = {
         id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
-          allowNull: false,         
+          allowNull: false,
+          autoIncrement: true,         
         },
         name: {
           type: Sequelize.STRING,
           allowNull: false, 
           unique: true,
         },
+        price: {
+          type: Sequelize.INTEGER,
+          allowNull: true, 
+        },
         brandId: { 
           type: Sequelize.INTEGER,
-          allowNull: false, 
+          allowNull: true, 
           references: {
             model: "Brands",
             key: "id"
@@ -32,7 +37,7 @@ module.exports = {
         },        
         description: {
             type: Sequelize.STRING(200),
-            allowNull: false
+            allowNull: true
         },
         image: {
             type: Sequelize.STRING(100),
@@ -52,12 +57,12 @@ module.exports = {
         },
         createdAt: {
           type: Sequelize.DATE,
-          allowNull: false, 
+          allowNull: true, 
           defaultValue: Sequelize.NOW
         },
         updatedAt: {
           type: Sequelize.DATE,
-          allowNull: false, 
+          allowNull: true, 
           defaultValue: Sequelize.NOW
         }
       })
