@@ -12,7 +12,7 @@ https://gaftextiles.herokuapp.com/
 
 ## Integrantes del equipo: 
 
-Federico Verteramo. 29 años. CABA, Argentina. Tec. en adm. de empresas.
+Federico Verteramo. 29 años. CABA, Argentina.
 
 ## Wireframe 
 Link donde se encuentra Wireframes del home y otras secciones importantes: 
