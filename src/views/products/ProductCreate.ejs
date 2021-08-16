@@ -28,6 +28,15 @@
 					<% }) %>
 				</select>
 
+				<label for="brand">Marca:</label>
+				<select name="brands" multiple>
+					<% brands.forEach(brand => { %>
+						<option value="<%= brandId %>">
+							<%= brand.name %>
+						</option>
+					<% }) %>
+				</select>
+
 			<label for="talle" >talle:</label>
 			<div class="talleFlex">
 			<% for( let i = 0; i < 5; i++ ) { %>

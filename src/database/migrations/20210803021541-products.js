@@ -7,12 +7,12 @@ module.exports = {
         id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
-          allowNull: false,
-          autoIncrement: true,         
+          allowNull: true,
+          autoIncrement: true, 
         },
         name: {
           type: Sequelize.STRING,
-          allowNull: false, 
+          allowNull: true, 
           unique: true,
         },
         price: {
@@ -29,7 +29,7 @@ module.exports = {
         },
         categoriesId: { 
           type: Sequelize.INTEGER,
-          allowNull: false, 
+          allowNull: true, 
           references: {
             model: "Categories",
             key: "id"
@@ -41,7 +41,7 @@ module.exports = {
         },
         image: {
             type: Sequelize.STRING(100),
-            allowNull: false
+            allowNull: true
         },
         offer: {
             type: Sequelize.BIGINT(10).UNSIGNED,
@@ -54,16 +54,6 @@ module.exports = {
         discount: {
             type: Sequelize.BIGINT(10).UNSIGNED,
             allowNull: true
-        },
-        createdAt: {
-          type: Sequelize.DATE,
-          allowNull: true, 
-          defaultValue: Sequelize.NOW
-        },
-        updatedAt: {
-          type: Sequelize.DATE,
-          allowNull: true, 
-          defaultValue: Sequelize.NOW
         }
       })
 

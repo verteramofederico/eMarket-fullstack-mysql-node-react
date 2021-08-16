@@ -7,7 +7,9 @@ module.exports = {
         id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
-          allowNull: false,         
+          autoIncrement: true,
+          allowNull: false,     
+          unique: true,    
         },
         name: {
           type: Sequelize.STRING,
@@ -18,16 +20,6 @@ module.exports = {
           type: Sequelize.STRING,
           allowNull: false, 
           unique: true,
-        },
-        createdAt: {
-          type: Sequelize.DATE,
-          allowNull: true, 
-          defaultValue: Sequelize.NOW
-        },
-        updatedAt: {
-          type: Sequelize.DATE,
-          allowNull: true, 
-          defaultValue: Sequelize.NOW
         }
       })
     } catch (error) {

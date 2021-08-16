@@ -7,6 +7,7 @@ module.exports = {
         id: {
           type: Sequelize.INTEGER,
           primaryKey: true,
+          autoIncrement: true,
           allowNull: false,         
         },
         productId: { 
@@ -22,16 +23,6 @@ module.exports = {
             model: "Colors",
             key: "id"
           }
-        },
-        createdAt: {
-          type: Sequelize.DATE,
-          allowNull: false, 
-          defaultValue: Sequelize.NOW
-        },
-        updatedAt: {
-          type: Sequelize.DATE,
-          allowNull: false, 
-          defaultValue: Sequelize.NOW
         }
       })
     } catch (error) {

@@ -24,12 +24,15 @@ module.exports = {
       },
       domicilio: {
         type: Sequelize.STRING,
+        allowNull: true 
       },
       interes: {
         type: Sequelize.STRING,
+        allowNull: true 
       },
       suscripcion: {
         type: Sequelize.BOOLEAN,
+        allowNull: true 
       },
       image: {
         type: Sequelize.STRING(100),
