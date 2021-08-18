@@ -3,9 +3,9 @@ const path = require("path")
 const router = require("../routes/productsRouter")
 
 // Modelos Json // Borrar
-const productModel = require("../models/products")
-const color = require('../models/color');
-const size = require('../models/size');
+const productModel = require("../trash/models/products")
+const color = require('../trash/models/color');
+const size = require('../trash/models/size');
 
 // Modelos Sequelize
 const db = require('../database/models');

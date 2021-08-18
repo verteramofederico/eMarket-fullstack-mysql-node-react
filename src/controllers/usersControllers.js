@@ -5,7 +5,7 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 //Json modelos
-const userModel = require("../models/users");
+const userModel = require("../trash/models/users");
 const session = require("express-session");
 
 // Modelos Sequelize

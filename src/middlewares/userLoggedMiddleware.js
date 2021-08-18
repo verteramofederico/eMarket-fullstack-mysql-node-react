@@ -1,5 +1,3 @@
-// json para borrar
-const User = require("../models/users")
 
 // Modelos Sequelize
 const db = require('../database/models');

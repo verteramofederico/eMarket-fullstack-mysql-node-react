@@ -1,3 +1,8 @@
+# retro sprint 6
+
+el grupo quedo de 1 integrante 
+
+
 # retro sprint 5
 
 el grupo quedo de 1 integrante 

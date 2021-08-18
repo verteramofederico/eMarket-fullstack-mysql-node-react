@@ -2,7 +2,7 @@
 const path = require("path")
 const router = require("../routes/mainRouter")
 
-const productModel = require("../models/products")
+const productModel = require("../trash/models/products")
 
 // Modelos Sequelize
 const db = require('../database/models');
