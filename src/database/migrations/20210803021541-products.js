@@ -13,7 +13,6 @@ module.exports = {
         name: {
           type: Sequelize.STRING,
           allowNull: true, 
-          unique: true,
         },
         price: {
           type: Sequelize.INTEGER,

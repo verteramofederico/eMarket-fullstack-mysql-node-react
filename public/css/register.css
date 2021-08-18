@@ -1,4 +1,6 @@
-
+.hidden {
+    display: none;
+}
 
 .titulo {
     text-align: center;

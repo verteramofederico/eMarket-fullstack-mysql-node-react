@@ -55,9 +55,9 @@ const usersController = {
                     name: req.body.nombre,
                     email: req.body.email,
                     domicilio: req.body.domicilio,
-                    interes: req.body.email,
+                    interes: req.body.interes,
                     suscripcion: req.body.suscripcion,
-                    password: bcrypt.hashSync(req.body.password, 10),
+                    password: bcryptjs.hashSync(req.body.password, 10),
                     // PENDIENTE AGREGAR UNA IMAGEN A ESTA RUTA
                     image: req.file == undefined ? 'default-user.jpg' : req.file.filename
                 })

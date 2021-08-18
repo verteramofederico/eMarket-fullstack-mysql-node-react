@@ -14,10 +14,10 @@
         <section>
             <p id="titulo">FILTRAR POR</p>
             <ul id="category">
-                <li><a href="/product/all/ropa">ROPA DE TRABAJO</a></li> 
-                <li><a href="/product/all/seguridad">SEGURIDAD</a></li>
-                <li><a href="/product/all/calzado">CALZADO</a></li>
-                <li><a href="/product/all/otros">OTROS</a></li>
+                <li><a href="/product/all/1">ROPA DE TRABAJO</a></li> 
+                <li><a href="/product/all/2">SEGURIDAD</a></li>
+                <li><a href="/product/all/3">CALZADO</a></li>
+                <li><a href="/product/all/4">OTROS</a></li>
             </ul>
             <h3 class="main__titulos">TODOS LOS PRODUCTOS</h3>
                 <div class="main__section__destacados">
@@ -26,8 +26,8 @@
                             <a href="/product/<%= product[i].id %>"><img class="imagenArticulo" src="/uploads/products/<%= product[i].image %>" alt=""></a>
                                 
                                 <div class="detalleArticulos">   <i class="fas fa-truck"></i>  
-                                <p class="precio"><%= product[i].price %> </p>
-                                <p class="descuentos"><%= product[i].discount %> </p>
+                                <p class="precio">$<%= product[i].price %> </p>
+                                <p class="descuentos"><%= product[i].discount %>% </p>
                                 <h4 class="descripciones"><%= product[i].name %> </h4>
                                 </div>
                         </article>

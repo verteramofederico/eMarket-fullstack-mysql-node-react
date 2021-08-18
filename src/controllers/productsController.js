@@ -20,11 +20,13 @@ const { like } = Op
 const productsController = {
     ProductAll: (req, res) => {
         db.Product.findAll({
-            include: ["brand"]
+            include: ['colors', "sizes", "brand", "categories"]
         })
             .then(product => {
                 // return res.send (products) // si esto funciona ok lo borro y dejo la siguiente:
-                res.render('products/products', {product})
+                res.render('products/products', {
+                    product:req.params.category?product.filter(product => product.categoriesId == req.params.category):product
+                })
             })
             .catch(error => res.send(error)) 
         },
@@ -39,7 +41,7 @@ const productsController = {
                 include: ['colors', "sizes", "brand", "categories"]
             })
             .then(product => {
-                res.render('productDetail', {product});
+                res.render('products/productDetail', {product});
             })
             .catch(error => res.send(error)) 
             ;
@@ -48,15 +50,15 @@ const productsController = {
 
     ProductCreate: (req, res) => 
         {
-            let promBrand = Brand.findAll();
-            let promColor = Color.findAll();
-            let promSize = Size.findAll();
-            let promCategory = Category.findAll();
+            let promBrand = db.Brand.findAll();
+            let promColor = db.Color.findAll();
+            let promSize = db.Size.findAll();
+            let promCategory = db.Category.findAll();
             
             Promise  // palabra promise sirve para algo?
             // all?
             .all([promBrand, promColor, promSize, promCategory ])
-            .then(([colors, sizes, brands, categories ]) => {
+            .then(([brands, colors, sizes, categories ]) => {
                 return res.render("products/productCreate", {colors, sizes, brands, categories })})
             .catch(error => res.send(error))
         },
@@ -66,15 +68,15 @@ const productsController = {
 
         let productId = req.params.id;
         let promProducts = db.Product.findByPk([productId],{include: ['colors', "sizes", "brand", "categories"]});
-        let promBrand = Brand.findAll();
-        let promColor = Color.findAll();
-        let promSize = Size.findAll();
-        let promCategory = Category.findAll();
+        let promBrand = db.Brand.findAll();
+        let promColor = db.Color.findAll();
+        let promSize = db.Size.findAll();
+        let promCategory = db.Category.findAll();
 
         Promise
         .all([promProducts, promBrand, promColor, promSize, promCategory])
-        .then(([product, colors, sizes, brands, categories ]) => {
-            return res.render("products/productEdit", {product, colors, sizes, brands, categories})})
+        .then(([product, brands, colors, sizes, categories ]) => {
+            return res.render("products/productEdit", {product, brands, colors, sizes, categories})})
             .catch(error => res.send(error))
     },
     
@@ -92,25 +94,30 @@ const productsController = {
         },
     //res.render("products/productEditImage", {product:productModel.one(req.params.id)}),
     
-    store: (req, res) => {
-            db.Product.create(
-                {
+    store: async (req, res) => {
+            //return res.send(req.body)
+            try {
+                const product = await db.Product.create({
                     name: req.body.name,
                     price: req.body.price,
                     description: req.body.description,
-                    colorId: req.body.colorId,
-                    brandId: req.body.brandId,
-                    sizeId: req.body.sizeId,
-                    categoryId: req.body.categoryId,
+                    
+                    brandId: req.body.brands,
+                    
+                    categoriesId: req.body.category,
                     image: req.file.filename,
                     offer: req.body.offer,
                     outstanding: req.body.outstanding,
                     discount: req.body.discount                   
-                }
-            )
-            .then(()=> {
-                return res.redirect("/product/all")})            
-            .catch(error => res.send(error))
+                })       
+                const colors = await product.addColors(req.body.colors)
+                const sizes = await product.addSizes(req.body.size)     
+                    return res.redirect("/product/all") 
+                
+            } catch (error) {
+                res.send(error)
+            }
+                
         /* JSON let result = productModel.new(req.body,req.file) return result == true ? res.redirect("/product/all") : res.send("Error al cargar la informacion")  */
     },
     update: (req, res) => {
@@ -121,10 +128,8 @@ const productsController = {
                     name: req.body.name,
                     price: req.body.price,
                     description: req.body.description,
-                    colorId: req.body.colorId,
-                    brandId: req.body.brandId,
-                    sizeId: req.body.sizeId,
-                    categoryId: req.body.categoryId,
+                    brandId: req.body.brand,                    
+                    categoryId: req.body.category,
                     offer: req.body.offer,
                     outstanding: req.body.outstanding,
                     discount: req.body.discount          

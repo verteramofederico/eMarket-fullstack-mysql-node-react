@@ -1,5 +1,3 @@
-const User = require("../models/users")
-
 function productAuthMiddleware(req, res, next) {
 	if (!req.session.userLogged || 
         !req.session.userLogged.email.includes("gaf")) {
