@@ -20,13 +20,15 @@
 			<textarea name="description" id="description"></textarea>
 
 			<label for="colors">Color:</label>
-				<select name="colors" multiple>
+			<div class="talleFlex">
+				
 					<% colors.forEach(color => { %>
-						<option value="<%= color.id %>" style="<%= `background-color:${color.value};`%>">
+						<input type="checkbox" name="colors" value="<%= color.id %>" style="<%= `background-color:${color.value};`%>">
 							<%= color.name %>
-						</option>
+					</input>
 					<% }) %>
-				</select>
+					
+			</div>
 
 				<label for="brand">Marca:</label>
 				<select name="brands" >

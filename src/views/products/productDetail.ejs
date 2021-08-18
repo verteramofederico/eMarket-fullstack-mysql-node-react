@@ -34,19 +34,17 @@
                                     </form>
                         <% } %>
 
-                                <% if (product.size) { %>
+                                <% if (product.sizes) { %>
                                     <form class="detail__informacion__talle" action="/talles" method="POST">
                                         <label>Talle:</label>
                                         <select name="talles">
                                             ejsif
-                                            <% for( let i = 0; i < product.size.length; i++ ) { %>
-                                                <option value="<% product.size[i].name%>"><%=product.size[i].name%> </option>
+                                            <% for( let i = 0; i < product.sizes.length; i++ ) { %>
+                                                <option value="<% product.sizes[i].name%>"><%=product.sizes[i].name%> </option>
                                                 <% } %>
                                         </select>
                                         </form>
-                                <% } %>
-
-                                <% console.log(product) %> 
+                                <% } %>                               
                             
                         </section>
                             <div class="cant">

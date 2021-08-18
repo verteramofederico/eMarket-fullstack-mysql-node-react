@@ -55,8 +55,7 @@ const productsController = {
             let promSize = db.Size.findAll();
             let promCategory = db.Category.findAll();
             
-            Promise  // palabra promise sirve para algo?
-            // all?
+            Promise  
             .all([promBrand, promColor, promSize, promCategory ])
             .then(([brands, colors, sizes, categories ]) => {
                 return res.render("products/productCreate", {colors, sizes, brands, categories })})
@@ -66,15 +65,15 @@ const productsController = {
     
     ProductEdit: (req, res) => {
 
-        let productId = req.params.id;
-        let promProducts = db.Product.findByPk([productId],{include: ['colors', "sizes", "brand", "categories"]});
+        let promProducts = db.Product.findByPk(req.params.id,
+            {include: ['colors', "sizes", "brand", "categories"]})
         let promBrand = db.Brand.findAll();
         let promColor = db.Color.findAll();
         let promSize = db.Size.findAll();
         let promCategory = db.Category.findAll();
 
         Promise
-        .all([promProducts, promBrand, promColor, promSize, promCategory])
+        .all([promProducts, promBrand, promColor, promSize, promCategory ])
         .then(([product, brands, colors, sizes, categories ]) => {
             return res.render("products/productEdit", {product, brands, colors, sizes, categories})})
             .catch(error => res.send(error))
@@ -84,8 +83,7 @@ const productsController = {
 
     ProductEditImage: (req, res) => {
 
-        let productId = req.params.id;
-        let promProducts = db.Product.findByPk([productId]);
+        let promProducts = db.Product.findByPk(req.params.id);
         Promise
         .all([promProducts])
         .then(([product]) => {
@@ -100,8 +98,7 @@ const productsController = {
                 const product = await db.Product.create({
                     name: req.body.name,
                     price: req.body.price,
-                    description: req.body.description,
-                    
+                    description: req.body.description,                    
                     brandId: req.body.brands,
                     
                     categoriesId: req.body.category,
@@ -120,26 +117,32 @@ const productsController = {
                 
         /* JSON let result = productModel.new(req.body,req.file) return result == true ? res.redirect("/product/all") : res.send("Error al cargar la informacion")  */
     },
-    update: (req, res) => {
-        let productId = req.params.id;
-        db.Product
-        .update(
-            {
+    update: async(req, res) => {
+        try {        
+            let productId = req.params.id;
+            const updated = await db.Product
+            .update(
+                {
                     name: req.body.name,
                     price: req.body.price,
-                    description: req.body.description,
-                    brandId: req.body.brand,                    
-                    categoryId: req.body.category,
+                    description: req.body.description,                    
+                    brandId: req.body.brands,                
+                    categoriesId: req.body.category,
                     offer: req.body.offer,
                     outstanding: req.body.outstanding,
                     discount: req.body.discount          
-            },
-            {
-                where: {id: productId}
-            })
-        .then(()=> {
-            return res.redirect('/product/all')})            
-        .catch(error => res.send(error))
+                },
+                {
+                    where: {id: productId}
+                })
+                const product = await db.Product.findByPk(productId)
+                const colors = await product.setColors(req.body.colors)
+                const sizes = await product.setSizes(req.body.size)      
+                return res.redirect('/product/all')
+        } 
+        catch (error) {
+            res.send(error)
+        }
 
         /*  Json let result = productModel.edit(req.body,req.params.id) return result == true ? res.redirect("/product/all") : res.send("Error al cargar la informacion")  */
     },
