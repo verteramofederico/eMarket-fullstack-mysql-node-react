@@ -12,12 +12,14 @@
         <form class="formulario" method="POST" action="/product/create" enctype="multipart/form-data" >
             <label for="name" class="form-label">Nombre del producto:</label>
 			<input type="text" id="name" name="name" placeholder="Ej: Pantalon Pampero" class="form-input">
+			<div id="nameError"></div>
 						
             <label for="price" class="form-label">Precio del producto:</label>
 			<input type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
 
             <label for="description" class="form-label">Descipción:</label>
 			<textarea name="description" id="description"></textarea>
+			<div id="descriptionError"></div>
 
 			<label for="colors">Color:</label>
 			<div class="talleFlex">
@@ -69,6 +71,7 @@
 			<label for="image">image</label>
 			<input type="file" name="image" id="image" />
 			</fieldset>
+			<div id="imageError"></div>
 
 			<label for="offer" class="form-label">En oferta:</label>
 			<select name="offer" id="offer" class="form-input">
@@ -92,5 +95,6 @@
 
     <!-- ---------------- FOOTER ----------------- -->
     <%- include("../partials/footer.ejs") %>
+	<script src="/js/productCreateOrEdit.js"></script>
 </body>
 </html>

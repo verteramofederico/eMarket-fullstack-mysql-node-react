@@ -35,3 +35,14 @@
     justify-content: space-between;
     max-width: 40vw;
 }
+
+.is-invalid {
+    border: 1px solid red !important 
+}
+
+#descriptionError, #imageError, #nameError {
+    color: red;
+    font-weight: 200;
+    margin-left: 10px;
+    margin-bottom: 22px;
+}
