@@ -94,7 +94,7 @@ const productsController = {
     //res.render("products/productEditImage", {product:productModel.one(req.params.id)}),
     
     store: async (req, res) => {
-            return res.send(req.body)
+            //return res.send(req.body)
             const resultValidation = validationResult(req);
             if (resultValidation.errors.length > 0) {
                 return res.render ("products/productCreate", {
