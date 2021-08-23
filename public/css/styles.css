@@ -101,13 +101,14 @@ body {
 
 main {
     background-color:#DCEDC8;
+    padding-bottom:  70px;
 /*     padding: 20px; */
 }
 
 .main__banner {
     width: 100vw;
     max-height: 90vh;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .main__titulos {
@@ -307,7 +308,7 @@ main {
         }
         
         .header__main__rightnavbar a, .header__main__leftnavbar a  {
-            color: #DCEDC8;
+            color: white;
             text-decoration-line: none;
             transition: all 1s;
             

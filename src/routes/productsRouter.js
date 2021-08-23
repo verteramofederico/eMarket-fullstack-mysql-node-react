@@ -19,7 +19,7 @@ let dest = multer.diskStorage({
 const upload = multer({storage:dest});
 
 
-const validations = require('../middlewares/validateProductCreate');
+/* const validations = require('../middlewares/validateProductCreate'); */
 
 // traer el controller
 const productsController = require("../controllers/productsController")
@@ -31,7 +31,7 @@ router.get("/edit/:id",productAuthMiddleware, productsController.ProductEdit);
 router.get("/editImage/:id",productAuthMiddleware, productsController.ProductEditImage);
 router.get("/:id", productsController.ProducDetail);
 /* router.get("/cart", productsController.ProductCart); */
-router.post('/create', upload.single("image")/* ,validations */, productsController.store); 
+router.post('/create', upload.single("image"),/* validations, */ productsController.store); 
 router.put('/update/:id', productsController.update); 
 router.put('/updateImage/:id', [upload.single("image")], productsController.updateImage); 
 router.delete('/delete/:id', productsController.destroy); 

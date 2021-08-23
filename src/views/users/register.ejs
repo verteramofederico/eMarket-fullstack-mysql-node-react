@@ -18,9 +18,7 @@
     <form method="POST" action="/user/create" enctype="multipart/form-data" >
         <fieldset class="formulario__field">
 
-            <input 
-            type="text" 
-            name="nombre"  
+            <input type="text" name="nombre" class="formName"
             
             <% if (locals.oldData && oldData.nombre) { %>
                 value="<%= oldData.nombre%>"
@@ -32,13 +30,14 @@
             >
 
             <% if (locals.errors && errors.nombre) { %>
-                <div class="textoError"></div>
+                <div id="nameError" class="textoError"></div>
                     <%= errors.nombre.msg %> 
                 </div>
             <% } %>
+            <div id="nameError"></div>
 
 
-            <input type="text" name="email"
+            <input type="text" name="email" class="formEmail"
             <% if (locals.oldData && oldData.email) { %>
                 value="<%= oldData.email%>"
             <% } else { %> placeholder="Email"  <% } %>
@@ -53,7 +52,9 @@
                 </div>
             <% } %>
 
-            <input type="text" name="domicilio"
+            <div id="emailError"></div>
+
+            <input type="text" name="domicilio" class="formDomicilio"
             <% if (locals.oldData && oldData.domicilio) { %>
                 value="<%= oldData.domicilio%>"
             <% } else { %> placeholder="Domicilio"  <% } %>
@@ -67,10 +68,12 @@
                     <%= errors.domicilio.msg %> 
                 </div>
             <% } %>
+            <div id="domicilioError"></div>
             
+
             <fieldset>
                 <label for="image">Foto de perfil</label>
-                <input type="file" name="image" id="image" />
+                <input type="file" name="image" id="image" class="formImage" />
             </fieldset>
 
             <% if (locals.errors && errors.image) { %>
@@ -78,8 +81,9 @@
                     <%= errors.image.msg %> 
                 </div>
             <% } %>
+            <div id="imageError"></div>
 
-            <input type="password" name="password" placeholder="Contraseña" 
+            <input type="password" name="password" placeholder="Contraseña" class="formPassword" 
             <% if (locals.errors && errors.password) { %>
                 class="invalido"
             <% } %>>
@@ -88,6 +92,7 @@
                     <%= errors.password.msg %> 
                 </div>
             <% } %>
+            <div id="passwordError"></div>
 
             <label class="intereses" for="interes">Intereses</label>
             <div class="intereses__opciones">
@@ -112,6 +117,6 @@
     <!-- ---------------- FOOTER ----------------- -->
 
     <%- include("../partials/footer.ejs") %>
-
+<script src="/js/register.js"></script>
 </body>
 </html>

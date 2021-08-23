@@ -2,6 +2,10 @@
     display: none;
 }
 
+.is-invalid {
+    border: 1px solid red !important 
+}
+
 .titulo {
     text-align: center;
 }
@@ -69,6 +73,12 @@
 
 .textoError p {
     color: red;
+}
+
+#passwordError, #imageError, #nameError, #emailError, #domicilioError {
+    color: white;
+    font-weight: 200;
+    margin: auto;
 }
 
 
