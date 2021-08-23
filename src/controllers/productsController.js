@@ -1,6 +1,7 @@
 // fuente de datos
 const path = require("path")
 const router = require("../routes/productsRouter")
+const { validationResult } = require('express-validator');
 
 // Modelos Json // Borrar
 const productModel = require("../trash/models/products")
@@ -93,7 +94,14 @@ const productsController = {
     //res.render("products/productEditImage", {product:productModel.one(req.params.id)}),
     
     store: async (req, res) => {
-            //return res.send(req.body)
+            return res.send(req.body)
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                return res.render ("products/productCreate", {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+                } );
+        } else {
             try {
                 const product = await db.Product.create({
                     name: req.body.name,
@@ -114,7 +122,7 @@ const productsController = {
             } catch (error) {
                 res.send(error)
             }
-                
+        }   
         /* JSON let result = productModel.new(req.body,req.file) return result == true ? res.redirect("/product/all") : res.send("Error al cargar la informacion")  */
     },
     update: async(req, res) => {

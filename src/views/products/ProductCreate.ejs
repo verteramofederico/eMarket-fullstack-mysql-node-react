@@ -9,6 +9,12 @@
         <br>
         <h1 id="titulo">Crear producto</h1>
 
+		<% if (locals.errors && errors.name) { %>
+			<div class="textoError"></div>
+				<%= errors.name.msg %> 
+			</div>
+		<% } %>
+
         <form class="formulario" method="POST" action="/product/create" enctype="multipart/form-data" >
             <label for="name" class="form-label">Nombre del producto:</label>
 			<input type="text" id="name" name="name" placeholder="Ej: Pantalon Pampero" class="form-input">
@@ -23,7 +29,7 @@
 			<div class="talleFlex">
 				
 					<% colors.forEach(color => { %>
-						<input type="checkbox" name="colors" value="<%= color.id %>" style="<%= `background-color:${color.value};`%>">
+						<input type="checkbox" name="colors" value="<%= color.id %>">
 							<%= color.name %>
 					</input>
 					<% }) %>
