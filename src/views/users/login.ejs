@@ -19,18 +19,21 @@
     <form action="/user/login" method="POST" >
         <fieldset class="formulario__field">
 
-            <input type="text" name="usuario" placeholder="Ingrese email" >
+            <input type="text" name="usuario" placeholder="Ingrese email" class="formUser" >
 
             <% if (locals.errors && errors.usuario) { %>
                 <div class="textoError"> <p>
                     <%= errors.usuario.msg %> </p> 
                 </div>
             <% } %>
+            <div id="userError"></div>
 
-            <input type="password" name="password" placeholder="Password" >
+            <input type="password" name="password" placeholder="Password" class="formPassword">
             <p class="olvido">¿Olvidaste tu contraseña?</p>
+            <div id="passwordError"></div>
             <label><input type="checkbox" name="recordar" value="recordar"> Recordar usuario</label>
             <button class="botonEnviar" type="submit">Enviar</button>
+ 
 
         </fieldset>
     </form>
@@ -43,6 +46,6 @@
     <!-- ---------------- FOOTER ----------------- -->
 
     <%- include("../partials/footer.ejs") %>
-
+    <script src="/js/login.js"></script>
 </body>
 </html>

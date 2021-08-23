@@ -71,6 +71,16 @@ main {
     color: blue;
 }
 
+.is-invalid {
+    border: 1px solid red !important 
+}
+
+#passwordError, #userError{
+    color: white;
+    font-weight: 400;
+    margin: auto;
+}
+
 @media (min-width: 499px) {
     .formulario__field {
         max-width: 70vw;
@@ -83,4 +93,5 @@ main {
             max-width: 60vw;
             margin: auto;
             border: none;
-        }  }
+        }  
+    } 
