@@ -115,8 +115,8 @@ const productsController = {
                     outstanding: req.body.outstanding,
                     discount: req.body.discount                   
                 })       
-                const colors = await product.addColors(req.body.colors)
-                const sizes = await product.addSizes(req.body.size)     
+                const colors = await product.setColors(req.body.colors)
+                const sizes = await product.setSizes(req.body.size)     
                     return res.redirect("/product/all") 
                 
             } catch (error) {
