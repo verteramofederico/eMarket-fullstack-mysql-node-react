@@ -11,13 +11,14 @@
         <form class="formulario" action="/product/update/<%= product.id %>?_method=PUT" method="post" >
             <label for="name" class="form-label">Nombre del producto:</label>
 			<input type="text" id="name" name="name" value="<%= product.name %> " class="form-input">
-			
+			<div id="nameError"></div>
 						
             <label for="price" class="form-label">Precio del producto:</label>
 			<input type="text" id="price" name="price" value="<%= product.price %> " >
 
             <label for="description" class="form-label">Descipción:</label>
 			<textarea name="description" placeholder="<%= product.description %> " id="description" value="<%= product.description %>"></textarea>
+			<div id="descriptionError"></div>
 
 			<label for="colors">Color:</label>
 			<div class="talleFlex">
@@ -90,5 +91,6 @@
 
     <!-- ---------------- FOOTER ----------------- -->
     <%- include("../partials/footer.ejs") %>
+	<script src="/js/productCreateOrEdit.js"></script>
 </body>
 </html>

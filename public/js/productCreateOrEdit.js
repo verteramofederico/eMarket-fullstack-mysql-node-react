@@ -7,9 +7,10 @@ window.onload = function() {
     let description = document.querySelector("#description")
     let image = document.querySelector("#image")
 
-    console.log(name,description,image);
+    console.log(image)
 
-    name.focus()
+    name?name.focus():null
+    
     form.addEventListener("submit", (e) => {
 
         // name validator
