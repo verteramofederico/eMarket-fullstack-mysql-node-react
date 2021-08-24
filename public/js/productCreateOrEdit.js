@@ -7,8 +7,6 @@ window.onload = function() {
     let description = document.querySelector("#description")
     let image = document.querySelector("#image")
 
-    console.log(image)
-
     name?name.focus():null
     
     form.addEventListener("submit", (e) => {
