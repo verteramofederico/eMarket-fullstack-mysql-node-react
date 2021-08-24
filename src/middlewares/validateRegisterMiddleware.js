@@ -1,6 +1,15 @@
 const path = require('path');
 const { body } = require('express-validator');
 
+// Modelos Sequelize
+
+/* const db = require('../database/models');
+const sequelize = require("sequelize");
+const { Op } = sequelize;
+
+db.User.findOne({ where: { email: req.body.nombre } })
+db.User.findAll({ where: { email: req.body.nombre } })
+ */
 module.exports = [
     body("nombre").notEmpty().withMessage("Debes ingresar un nombre").bail()
     .isLength({ min: 2 }).withMessage("Debes ingresar un nombre de al menos 2 caracteres"),

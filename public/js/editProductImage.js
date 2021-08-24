@@ -14,7 +14,7 @@ window.onload = function() {
             image.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#imageError")
-                divError.innerHTML += "Debes ingresar imagen jpg, jpge, gif o png"
+                divError.innerHTML = "Debes ingresar imagen jpg, jpge, gif o png"
              //   alert("Debes ingresar imagen jpg, jpge, gif o png");
                 
         } 

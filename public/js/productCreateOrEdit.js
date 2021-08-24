@@ -16,7 +16,7 @@ window.onload = function() {
             name.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#nameError")
-                divError.innerHTML += "El campo nombre debe contener al menos 2 caracteres"             
+                divError.innerHTML = "El campo nombre debe contener al menos 2 caracteres"             
         } 
 
         // domicilio validator
@@ -24,7 +24,7 @@ window.onload = function() {
             description.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#descriptionError")
-                divError.innerHTML += "Descripcion debe contener al menos 15 caracteres"
+                divError.innerHTML = "Descripcion debe contener al menos 15 caracteres"
                // alert("Debes ingresar un domicilio");
                 
         }
@@ -34,7 +34,7 @@ window.onload = function() {
             image.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#imageError")
-                divError.innerHTML += "Debes ingresar imagen jpg, jpge, gif o png"
+                divError.innerHTML = "Debes ingresar imagen jpg, jpge, gif o png"
              //   alert("Debes ingresar imagen jpg, jpge, gif o png");
                 
         } 

@@ -15,7 +15,7 @@ window.onload = function() {
             password.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#passwordError")
-                divError.innerHTML += "Usuario o contraseña invalida"            
+                divError.innerHTML = "Usuario o contraseña invalida"            
         } 
         
 

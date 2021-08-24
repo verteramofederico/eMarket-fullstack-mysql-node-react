@@ -17,7 +17,7 @@ window.onload = function() {
             name.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#nameError")
-                divError.innerHTML += "El campo nombre debe contener al menos 2 caracteres"
+                divError.innerHTML = "El campo nombre debe contener al menos 2 caracteres"
                 // alert("El campo nombre debe contener al menos 2 caracteres");
                 
         } 
@@ -28,7 +28,7 @@ window.onload = function() {
             email.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#emailError")
-                divError.innerHTML += "Debe ingresar un email valido"
+                divError.innerHTML = "Debe ingresar un email valido"
                 // alert("Debe ingresar un email valido");
                 
         } 
@@ -38,7 +38,7 @@ window.onload = function() {
             domicilio.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#domicilioError")
-                divError.innerHTML += "Debe completar un domicilio"
+                divError.innerHTML = "Debe completar un domicilio"
                // alert("Debes ingresar un domicilio");
                 
         }
@@ -49,7 +49,7 @@ window.onload = function() {
             image.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#imageError")
-                divError.innerHTML += "Debes ingresar imagen jpg, jpge, gif o png"
+                divError.innerHTML = "Debes ingresar imagen jpg, jpge, gif o png"
              //   alert("Debes ingresar imagen jpg, jpge, gif o png");
                 
         } 
@@ -59,7 +59,7 @@ window.onload = function() {
             password.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#passwordError")
-                divError.innerHTML += "Password debe tener al menos 6 caracteres"
+                divError.innerHTML = "Password debe tener al menos 6 caracteres"
              //   alert("Password debe tener al menos 6 caracteres");
                 
         } 
