@@ -11,7 +11,6 @@ window.onload = function() {
 
     name.focus()
     form.addEventListener("submit", (e) => {
-        let errores = [];
         // name validator
         if (name.value === "" || name.value.length < 2) {
             name.classList.add("is-invalid")
@@ -19,7 +18,10 @@ window.onload = function() {
                 let divError = document.querySelector("#nameError")
                 divError.innerHTML = "El campo nombre debe contener al menos 2 caracteres"
                 
-        }  
+        } if (name.value !== "" && name.value.length > 2) {
+            name.classList.remove("is-invalid")
+                let divError = document.querySelector("#nameError")
+                divError.innerHTML = "" }
         
         // email validator
         re= /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -28,8 +30,10 @@ window.onload = function() {
                 e.preventDefault()
                 let divError = document.querySelector("#emailError")
                 divError.innerHTML = "Debe ingresar un email valido"
-                // alert("Debe ingresar un email valido");
-                
+        } if (email.value !== "" && re.exec(email.value)) {
+            email.classList.remove("is-invalid")
+                let divError = document.querySelector("#emailError")
+                divError.innerHTML = ""
         } 
 
         // domicilio validator
@@ -38,9 +42,13 @@ window.onload = function() {
                 e.preventDefault()
                 let divError = document.querySelector("#domicilioError")
                 divError.innerHTML = "Debe completar un domicilio"
-               // alert("Debes ingresar un domicilio");
                 
-        }
+        } if (domicilio.value !== "") {
+            domicilio.classList.remove("is-invalid")
+                let divError = document.querySelector("#domicilioError")
+                divError.innerHTML = ""
+                
+        } 
 
         // image validator
         var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
@@ -48,9 +56,11 @@ window.onload = function() {
             image.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#imageError")
-                divError.innerHTML = "Debes ingresar imagen jpg, jpge, gif o png"
-             //   alert("Debes ingresar imagen jpg, jpge, gif o png");
-                
+                divError.innerHTML = "Debes ingresar imagen jpg, jpge, gif o png"    
+        } if (image.value !== "" && allowedExtensions.exec(image.value) ) {
+            image.classList.remove("is-invalid")
+                let divError = document.querySelector("#imageError")
+                divError.innerHTML = ""    
         } 
         
         // password validator
@@ -58,14 +68,12 @@ window.onload = function() {
             password.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#passwordError")
-                divError.innerHTML = "Password debe tener al menos 6 caracteres"
-          
-                
+                divError.innerHTML = "Password debe tener al menos 6 caracteres"                    
+        } if (password.value !== "" && password.value.length >= 6) {
+            password.classList.remove("is-invalid")
+                let divError = document.querySelector("#passwordError")
+                divError.innerHTML = ""                    
         } 
-
-
     })
-
-    name.addEventListener("change", (e) => {})
 
 }

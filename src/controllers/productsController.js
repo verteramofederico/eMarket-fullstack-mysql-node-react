@@ -172,16 +172,16 @@ const productsController = {
         /* let result = productModel.editImage(req.file,req.params.id)
         return result == true ? res.redirect("/product/all") : res.send("Error al cargar la informacion")  */
     },
-    destroy : (req, res) => {
+    destroy: async (req,res) => {
         let productId = req.params.id;
-        db.Product
-        .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
-        .then(()=>{
-            return res.redirect('/product/all')})
-        .catch(error => res.send(error)) 
-
-        /* let result = productModel.delete(req.params.id);
-        return result == true ? res.redirect("/product/all") : res.send("Error al cargar la informacion")  */
+        try {
+            await db.colorsproducts.destroy({ where: {productId: productId}});
+            await db.sizesproduct.destroy({ where: {productId: productId}});
+            await db.Product.destroy({ where: {id: productId}})
+            return res.redirect('/product/all');
+        } catch (error) {
+            res.send (error);
+        }
     }
     }
 
