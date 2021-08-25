@@ -11,16 +11,15 @@ window.onload = function() {
 
     name.focus()
     form.addEventListener("submit", (e) => {
-
+        let errores = [];
         // name validator
         if (name.value === "" || name.value.length < 2) {
             name.classList.add("is-invalid")
                 e.preventDefault()
                 let divError = document.querySelector("#nameError")
                 divError.innerHTML = "El campo nombre debe contener al menos 2 caracteres"
-                // alert("El campo nombre debe contener al menos 2 caracteres");
                 
-        } 
+        }  
         
         // email validator
         re= /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -60,13 +59,13 @@ window.onload = function() {
                 e.preventDefault()
                 let divError = document.querySelector("#passwordError")
                 divError.innerHTML = "Password debe tener al menos 6 caracteres"
-             //   alert("Password debe tener al menos 6 caracteres");
+          
                 
         } 
 
 
     })
 
-
+    name.addEventListener("change", (e) => {})
 
 }
