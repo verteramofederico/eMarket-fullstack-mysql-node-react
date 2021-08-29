@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs", {title: "Shopping", cssDeseado:["shopping.css"] })%>
+<body>
+
+    <!-- ------------- HEADER -------------- -->
+
+    <%- include("./partials/header.ejs") %>
+
+<!-- ------------------ MAIN ----------------- -->
+
+    <main>
+        <ul>
+            <% products.forEach(product => { %> 
+                <li>
+                    <span><%= product.name %> </span>
+                    <span><%= product.price %> </span>
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="product" id="product" value="product" >
+                        <input type="hidden" name="user" id="user" value="<%= user.id %> " >
+                        <button type="submit">agregar</button>
+                    </form>
+                </li>
+            <% }) %> 
+        </ul>    
+    </main>
+
+    <!-- ---------------- FOOTER ----------------- -->
+
+    <%- include("./partials/footer.ejs") %>
+
+</body>
+</html>

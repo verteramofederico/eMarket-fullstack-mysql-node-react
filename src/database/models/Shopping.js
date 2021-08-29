@@ -1,5 +1,5 @@
-module.exports = (sequelize, dataTypes) => {
-    let alias = 'User'
+/* module.exports = (sequelize, dataTypes) => {
+    let alias = 'Shopping'
     let cols = {
         id: {
             allowNull: false,
@@ -47,14 +47,18 @@ module.exports = (sequelize, dataTypes) => {
     let config = {
         timestamps: true
     }
-    const User = sequelize.define(alias,cols,config)
+    const Shopping = sequelize.define(alias,cols,config)
 
-    /* User.associate = (models) => {
-        User.hasMany(models.Shopping, {
-            as: 'shopping',
+    Shopping.associate = (models) => {
+        Shopping.belongsTo(models.User, {
+            as: 'users',
             foreignKey: 'userId'
         })
+        Shopping.belongsTo(models.Product, {
+            as: 'products',
+            foreignKey: 'productId'
+        })
     }
-     */
-    return User
-}
+    
+    return Shopping
+} */
