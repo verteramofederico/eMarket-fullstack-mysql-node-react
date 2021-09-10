@@ -1,5 +1,5 @@
 main {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 
@@ -11,12 +11,14 @@ main {
 .presentacion__foto {
     width: 85vw;
     margin-left: 4vw ;
+    margin-top: 55px;
 }
 
 .presentacion__texto {
     text-align: center;
     padding-top: 20px;
     margin-left: 4vw;
+    margin-top: 20px;
 }
 
 .presentacion__parrafo {
