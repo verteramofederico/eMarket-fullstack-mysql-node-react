@@ -7,20 +7,20 @@
             primaryKey: true,
             type: dataTypes.INTEGER
             },
-            name: {
+        name: {
             type: dataTypes.STRING,
             allowNull: false, 
             },
-            email: {
+        email: {
             type: dataTypes.STRING,
             allowNull: false, 
             unique: true,
             },
-            password: {
+        password: {
             type: dataTypes.STRING,
             allowNull: false, 
             },
-            domicilio: {
+        domicilio: {
             type: dataTypes.STRING,
             },
             interes: {
