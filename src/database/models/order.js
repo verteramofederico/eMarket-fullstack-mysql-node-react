@@ -18,11 +18,11 @@ module.exports = (sequelize, dataTypes) => {
     const Order = sequelize.define(alias,cols,config)
 
     Order.associate = (models) => {
-        Order.belongsTo(models.paymentMethod, {
+        Order.belongsTo(models.PaymentMethod, {
             as: 'paymentMethod',
             foreignKey: 'paymentId'
         })
-        Order.belongsToMany(models.shopping, {
+        Order.belongsToMany(models.Shopping, {
             as: 'shoppings',
             through: 'shoppingOrder',
             foreignKey: 'orderId',
