@@ -8,15 +8,15 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
             },
         productId: { 
-                type: DataTypes.INTEGER,
+                type: dataTypes.INTEGER,
                 allowNull: true, 
             },
         userId: { 
-                type: DataTypes.INTEGER,
+                type: dataTypes.INTEGER,
                 allowNull: true, 
             },
         quantity: { 
-                type: DataTypes.INTEGER,
+                type: dataTypes.INTEGER,
                 allowNull: true, 
             }
     };

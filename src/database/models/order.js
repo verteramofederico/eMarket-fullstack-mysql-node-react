@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
             },
         paymentId: { 
-                type: DataTypes.INTEGER,
+                type: dataTypes.INTEGER,
                 allowNull: true, 
             }
     };
