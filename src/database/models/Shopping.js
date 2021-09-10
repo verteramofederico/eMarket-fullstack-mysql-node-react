@@ -1,4 +1,4 @@
-/* module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {
     let alias = 'Shopping'
     let cols = {
         id: {
@@ -7,41 +7,17 @@
             primaryKey: true,
             type: dataTypes.INTEGER
             },
-        name: {
-            type: dataTypes.STRING,
-            allowNull: false, 
-            },
-        email: {
-            type: dataTypes.STRING,
-            allowNull: false, 
-            unique: true,
-            },
-        password: {
-            type: dataTypes.STRING,
-            allowNull: false, 
-            },
-        domicilio: {
-            type: dataTypes.STRING,
-            },
-            interes: {
-            type: dataTypes.STRING,
-            },
-            suscripcion: {
-            type: dataTypes.BOOLEAN,
-            },
-            image: {
-            type: dataTypes.STRING(100),
-            allowNull: false
-            },
-            createdAt: {
-                type: dataTypes.DATE,
+        productId: { 
+                type: DataTypes.INTEGER,
                 allowNull: true, 
-                defaultValue: dataTypes.NOW
             },
-            updatedAt: {
-                type: dataTypes.DATE,
+        userId: { 
+                type: DataTypes.INTEGER,
                 allowNull: true, 
-                defaultValue: dataTypes.NOW
+            },
+        quantity: { 
+                type: DataTypes.INTEGER,
+                allowNull: true, 
             }
     };
     let config = {
@@ -58,7 +34,13 @@
             as: 'products',
             foreignKey: 'productId'
         })
+        Shopping.belongsToMany(models.Order, {
+            as: 'orders',
+            through: 'shoppingOrder',
+            foreignKey: 'shoppingId',
+            other: 'orderId'
+        })
     }
     
     return Shopping
-} */
+} 
