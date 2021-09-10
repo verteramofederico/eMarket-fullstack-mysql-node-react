@@ -1,3 +1,4 @@
+
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -10,14 +11,6 @@ module.exports = {
       },
       method: {
         type: Sequelize.STRING
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },

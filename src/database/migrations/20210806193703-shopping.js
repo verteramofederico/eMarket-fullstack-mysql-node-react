@@ -1,46 +1,37 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('CartProducts', {
+    await queryInterface.createTable('Shopping', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      quantity: {
-        type: Sequelize.BIGINT(10).UNSIGNED,
-        allowNull: true
-      },
-      subtotal: {
-        type: Sequelize.BIGINT(10).UNSIGNED,
-        allowNull: true
-      },
       productId: { 
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: "Products",
           key: "id"
         }
       },
-      cartId: { 
+      userId: { 
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
-          model: "Carts",
+          model: "Users",
           key: "id"
         }
       },
-      createdAt: {
+      quantity: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        defaultValue: 1
       }
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('CartProducts');
+    await queryInterface.dropTable('Shopping');
   }
 };

@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "fede2407",
-    "database": "gaf_db",
+    "database": "gafShopping_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
