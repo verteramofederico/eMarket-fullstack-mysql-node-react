@@ -11,10 +11,10 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.INTEGER,
                 allowNull: true, 
             },
-        userId: { 
+        orderNumber: { 
                 type: dataTypes.INTEGER,
-                allowNull: true, 
-            },
+                allowNull: false,
+            },     
         quantity: { 
                 type: dataTypes.INTEGER,
                 allowNull: true, 
@@ -26,19 +26,9 @@ module.exports = (sequelize, dataTypes) => {
     const Shopping = sequelize.define(alias,cols,config)
 
     Shopping.associate = (models) => {
-        Shopping.belongsTo(models.User, {
-            as: 'users',
-            foreignKey: 'userId'
-        })
         Shopping.belongsTo(models.Product, {
             as: 'products',
             foreignKey: 'productId'
-        })
-        Shopping.belongsToMany(models.Order, {
-            as: 'orders',
-            through: 'shoppingOrder',
-            foreignKey: 'shoppingId',
-            other: 'orderId'
         })
     }
     

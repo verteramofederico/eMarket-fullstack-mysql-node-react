@@ -12,53 +12,42 @@
     <main>
 
             <% if (product != undefined) { %>
-                <section class="detail">
                     <picture class="detail__img">
                         <img src="../uploads/products/<%= product.image %>" alt="traje">
-                    </picture>
-                <section class="detail__informacion">
+                    </picture>    
                     <h3 class="detail__informacion__titulo"><%= product.name %> </h3>
                     <h4 class="detail__informacion__precio"> <span id="fondo__precio" >$<%= product.price %> </span></h4>
-                    <h7 class="detail_informacion_descripcion"></h6><%= product.description %> </h7>
-    
+                    <h7 class="detail_informacion_descripcion"></h6><%= product.description 
+                    %> </h7>
 
+                <form method="POST" action="/user/addcart">
                         <% if (product.colors) { %>
-                            <section class="detaill_informacion__formularios" >
-                                <form class="detail__informacion__color" action="/colors" method="POST">
                                     <label>Color:</label>
                                     <select name="color">
                                         <% for( let i = 0; i < product.colors.length; i++ ) { %>
                                         <option value="<% product.colors[i].name%>"><%=product.colors[i].name%> </option>
                                         <% } %>
                                     </select>
-                                    </form>
                         <% } %>
 
-                                <% if (product.sizes) { %>
-                                    <form class="detail__informacion__talle" action="/talles" method="POST">
-                                        <label>Talle:</label>
-                                        <select name="talles">
-                                            ejsif
-                                            <% for( let i = 0; i < product.sizes.length; i++ ) { %>
-                                                <option value="<% product.sizes[i].name%>"><%=product.sizes[i].name%> </option>
-                                                <% } %>
-                                        </select>
-                                        </form>
+                        <% if (product.sizes) { %>
+
+                                    <label>Talle:</label>
+                                    <select name="talles">
+
+                                        <% for( let i = 0; i < product.sizes.length; i++ ) { %>
+                                        <option value="<% product.sizes[i].name%>"><%=product.sizes[i].name%> </option>
+                                        <% } %>
+                                    </select>
                                 <% } %>                               
                             
-                        </section>
-                            <div class="cant">
                                 <label class="count">Cantidad</label>
-                                <button class="menos" onclick="contadormenos()">-</button>
                                 <input id="count" type="text" style="text-align: center; width: 30px;">
-                                <button class="menos" onclick="contadormas()">+</button>
-                            </div>
     
                     
-                    <button class="detail__informacion__boton">Agregar al carrito</button>
-                    
-            </section>
-        </section>
+                <button type="submit" class="detail__informacion__boton">Agregar al carrito</button>      
+        </form> 
+
             <% } %>
 
     </main>

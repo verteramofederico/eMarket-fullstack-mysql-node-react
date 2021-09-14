@@ -8,11 +8,26 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      userId: { 
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "Users",
+          key: "id"
+        }
+      },
+      active: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false,
+        allowNull: false
+      },
       paymentId: { 
         type: Sequelize.INTEGER,
+        allowNull: true,
         references: {
           model: "paymentMethods",
-          key: "id"
+          key: "id",
+          allowNull: true,
         }
       }
     });

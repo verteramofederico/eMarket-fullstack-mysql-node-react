@@ -19,8 +19,10 @@ router.get("/login", guestMiddleware, usersController.login);
 router.get("/register", guestMiddleware, usersController.register);
 router.post('/create', uploadFile.single("image"),validations, usersController.store);
 router.post("/login", usersController.loginProcess); 
+router.post("/addcart", usersController.addcart); 
 router.get("/profile/", authMiddleware, usersController.profile);
 router.get('/logout/', usersController.logout);
+
 
 // exporto
 module.exports = router; 

@@ -14,15 +14,11 @@ module.exports = {
         references: {
           model: "Products",
           key: "id"
-        }
+          }
       },
-      userId: { 
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        references: {
-          model: "Users",
-          key: "id"
-        }
+      orderNumber: { 
+      type: Sequelize.INTEGER,
+      allowNull: false,
       },
       quantity: {
         type: Sequelize.INTEGER,

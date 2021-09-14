@@ -82,7 +82,10 @@ const usersController = {
 		res.clearCookie('user');
 		req.session.destroy();
 		return res.redirect('/');
-	}
+	},
+    addcart: (req, res) => {
+        return res.send(req.body)
+    }
     }
 
 
