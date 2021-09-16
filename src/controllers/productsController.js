@@ -24,7 +24,7 @@ const productsController = {
             include: ['colors', "sizes", "brand", "categories"]
         })
             .then(product => {
-                // return res.send (products) // si esto funciona ok lo borro y dejo la siguiente:
+                // return res.send (products)
                 res.render('products/products', {
                     product:req.params.category?product.filter(product => product.categoriesId == req.params.category):product
                 })

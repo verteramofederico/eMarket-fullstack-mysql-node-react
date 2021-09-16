@@ -7,8 +7,10 @@ const { like } = Op
 
 
 const productsAPIController = {
-    'list': (req, res) => {
-        db.Product.findAll()
+    'list': async (req, res) => {
+        await db.Product.findAll({
+            include: ['colors', "sizes", "brand", "categories"]
+        })
         .then(products => {
             let respuesta = {
                 meta: {
@@ -16,11 +18,23 @@ const productsAPIController = {
                     total: products.length,
                     url: 'api/products'
                 },
-                data: {
+                data: 
+                    {
                     count: products.length,
-                    countByCategory: products.length,
-                    products
-                }
+//                    products: products,
+                    product: products.map(product => {
+                        let product22 = { 
+                            id: product.id,
+                        name: product.name,
+                        color: product.colors.map(color => color.name )}
+                        return product22
+                    }
+                    )}
+                
+                   //countByCategory: ???
+                        // detail: url
+                        // un array con principal relación de uno a muchos                                               
+                
             }
                 res.json(respuesta);
             })
@@ -33,9 +47,12 @@ const productsAPIController = {
                     meta: {
                         status: 200,
                         total: product.length,
-                        url: '/api/products/:id'
+                        url: '/api/products/:id' //req params
                     },
                     data: product
+                    //urlImagen: "localhost:"
+                    // Una URL para la imagen del producto (para mostrar la imagen).
+                    //un array por cada relación de uno a muchos (categories, colors, sizes, etc).
                 }
                 res.json(respuesta);
             });
