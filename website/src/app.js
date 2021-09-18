@@ -9,8 +9,8 @@ const cookies = require('cookie-parser');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // Server
-app.set("port", process.env.PORT ||3000)
-app.listen(app.get("port"), () => console.log("Server Start in http://localhost:3000"))
+app.set("port", process.env.PORT ||3001)
+app.listen(app.get("port"), () => console.log("Server Start in http://localhost:3001"))
 
 // Configuración
 app.use(express.static(path.resolve(__dirname,"../public")));
