@@ -21,19 +21,20 @@ const productsAPIController = {
                 data: 
                     {
                     count: products.length,
-//                    products: products,
+                    //products: products,
                     product: products.map(product => {
-                        let product22 = { 
-                            id: product.id,
+                        let productMap = { 
+                        id: product.id,
                         name: product.name,
-                        color: product.colors.map(color => color.name )}
-                        return product22
+                        description: product.description,
+                        color: product.colors.map(color => color.name),
+                        size: product.sizes.map(size => size.name),
+                        categories: product.categoriesId,
+                                    }      
+                        return productMap
                     }
-                    )}
-                
-                   //countByCategory: ???
-                        // detail: url
-                        // un array con principal relación de uno a muchos                                               
+                    )}      
+                   //countByCategory: ???                                          
                 
             }
                 res.json(respuesta);
