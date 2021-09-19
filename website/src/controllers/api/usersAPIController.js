@@ -1,44 +1,38 @@
 const path = require('path');
 const db = require('../../database/models');
-const sequelize = require("sequelize");
-const { Op } = sequelize;
-const moment = require('moment');
-const { like } = Op
-
 
 const usersAPIController = {
-    'list': (req, res) => {
-        db.User.findAll()
-        .then(users => {
-            let respuesta = {
-                meta: {
-                    status : 200,
-                    total: users.length,
-                    url: 'api/users'
-                },
-                data: {
-                    count: users.length,
-                    users
-                }
-            }
-                res.json(respuesta);
-            })
-    },
-    
-    'detail': (req, res) => {
-        db.User.findByPk(req.params.id)
-            .then(user => {
-                let respuesta = {
-                    meta: {
-                        status: 200,
-                        total: user.length,
-                        url: '/api/user/:id'
-                    },
-                    data: user
-                }
-                res.json(respuesta);
+    list: async (req, res) => {
+        try {
+            const users = await db.User.findAll({attributes: ['id','name','email','interes']});
+            
+            users.forEach(user => {
+                user.dataValues.detail = `http://localhost:3001/api/users/${user.id}`
             });
-    }    
+
+            res.json({  
+                count: users.length,
+                users: users
+            });
+        } catch(error) {
+            throw error;
+        }
+    },
+    detail: async (req, res) => {
+        try {
+            const user = await db.User.findByPk(req.params.id);
+
+            res.json({
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                interes: user.interes,
+                image: `http://localhost:3001/uploads/users/${user.image}`
+            })
+        } catch (error) {
+            throw error;
+        }
+}
 }
 
 module.exports = usersAPIController;

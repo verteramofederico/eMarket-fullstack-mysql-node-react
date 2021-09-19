@@ -1,11 +1,14 @@
 // Módulos
 const path = require("path");
 const express = require("express");
+var cors = require('cors')
 const session = require("express-session");
 const app = express();
 const method = require('method-override'); // para put y delete. Requiere NPM I method-override
 const cookies = require('cookie-parser');
 
+
+app.use(cors())
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // Server

@@ -7,7 +7,33 @@ const { like } = Op
 
 
 const productsAPIController = {
-    'list': async (req, res) => {
+    index: async (req, res) => {
+        try {
+            //Cosas para contar productos por categorias 
+            const categories = await db.Category.findAll();
+            let categoriesArray = [];
+            categories.forEach(async category =>{
+                let categoryProductTotal = await db.Product.count({where:{categoriesId: category.id}})
+                var categoryCount = {name: category.name, total: categoryProductTotal}
+                categoriesArray.push(categoryCount);
+            });
+
+            //Cosas para Productos
+            const products = await db.Product.findAll({include: ['brand',"colors","sizes",'categories'], attributes: ['id','name','description']})
+            const totalProducts = products.length;
+            
+            //Agregando link para detalle producto
+            products.forEach(product =>{
+                product.dataValues.detail = `http://localhost:3000/api/products/${product.id}`
+            });
+
+            res.status(200).json({status:200, count: totalProducts, countByCategory:categoriesArray, products: products})
+
+        }catch (error) {
+            throw error;
+        }
+    },
+/*     'list': async (req, res) => {
         await db.Product.findAll({
             include: ['colors', "sizes", "brand", "categories"]
         })
@@ -21,28 +47,16 @@ const productsAPIController = {
                 data: 
                     {
                     count: products.length,
-                    //products: products,
-                    product: products.map(product => {
-                        let productMap = { 
-                        id: product.id,
-                        name: product.name,
-                        description: product.description,
-                        color: product.colors.map(color => color.name),
-                        size: product.sizes.map(size => size.name),
-                        categories: product.categoriesId,
-                                    }      
-                        return productMap
-                    }
-                    )}      
-                   //countByCategory: ???                                          
+                    products: products,
+                    
+                    }                                                       
                 
             }
                 res.json(respuesta);
             })
-    },
-    
+    }, */
     'detail': (req, res) => {
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id, {include: ['brand',"colors","sizes",'categories'], attributes: ['id','name','description', "image"]})
             .then(product => {
                 let respuesta = {
                     meta: {
@@ -50,8 +64,10 @@ const productsAPIController = {
                         total: product.length,
                         url: '/api/products/:id' //req params
                     },
-                    data: product
-                    //urlImagen: "localhost:"
+                    data: {product: product,
+                    urlImage: `http://localhost:3001/uploads/products/${product.image}`
+                        
+                    }
                     // Una URL para la imagen del producto (para mostrar la imagen).
                     //un array por cada relación de uno a muchos (categories, colors, sizes, etc).
                 }
