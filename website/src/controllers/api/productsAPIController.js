@@ -19,12 +19,13 @@ const productsAPIController = {
             });
 
             //Cosas para Productos
-            const products = await db.Product.findAll({include: ['brand',"colors","sizes",'categories'], attributes: ['id','name','description']})
+            const products = await db.Product.findAll({include: ['brand',"colors","sizes",'categories'], attributes: ['id','name','description', "image"]})
             const totalProducts = products.length;
             
             //Agregando link para detalle producto
             products.forEach(product =>{
-                product.dataValues.detail = `http://localhost:3000/api/products/${product.id}`
+                product.dataValues.detail = `http://localhost:3001/api/products/${product.id}`;
+                product.dataValues.imageUrl = `http://localhost:3001/uploads/products/${product.image}`
             });
 
             res.status(200).json({status:200, count: totalProducts, countByCategory:categoriesArray, products: products})

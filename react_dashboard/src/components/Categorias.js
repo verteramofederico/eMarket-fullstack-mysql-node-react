@@ -8,11 +8,11 @@ function Categorias(props) {
                 Categorias en base de datos
               </h5>
             
-    {props.categories.length == 0 ? (<h1>Cargando...</h1>
+    {props.categories.length == 0 ? (<h3>Cargando...</h3>
             ) : (                
-                    props.categories.map(category =>      
-              <div className="card bg-dark text-white shadow">
-                <div className="card-body">{category.name}  ||  Total: {category.total}</div>
+                    props.categories.map((category, index) =>      
+              <div key={index} className="card bg-dark text-white shadow">
+                <div className="card-body" >{category.name}  ||  Total: {category.total}</div>
               </div>))
     }
     </section> 

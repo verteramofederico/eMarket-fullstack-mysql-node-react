@@ -11,8 +11,6 @@ function PanelDetalle(){
         .then((data) => {setCategory(data.countByCategory)})
         }, []);
 
-        console.log(categoriesInDB)
-
     return (
         <div className="row">
             
