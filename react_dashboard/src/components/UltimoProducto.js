@@ -1,6 +1,5 @@
 import {React, useState, useEffect} from 'react';
 
-
 function UltimoProducto(){
 
     const [lastProduct, setLastProduct] = useState([]);
@@ -10,7 +9,6 @@ function UltimoProducto(){
         .then((response) => response.json())
         .then((data) => {
             let totalProducts = data.products.length
-            console.log(data.products[totalProducts - 1])
             setLastProduct(data.products[totalProducts - 1])})
         }, []);
 
@@ -26,11 +24,9 @@ function UltimoProducto(){
                 <div className="card-body">
                     <h4>{lastProduct.name}</h4>
                     <p>{lastProduct.categories.name}</p>
-                    <p>{lastProduct.description}</p>
-                    <p>{lastProduct.colors}</p>
-                    <p>{lastProduct.sizes}</p>
-                    <img src={lastProduct.imageUrl} />
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                    <p>{lastProduct.description}</p>             
+                    <img src={lastProduct.imageUrl} alt="imagen product"/>
+                    <a className="btn btn-danger" target="_blank" rel="noreferrer" rel="nofollow" href={lastProduct.detail}>Ver detalle producto</a>
                 </div> ) }
 
             </div>

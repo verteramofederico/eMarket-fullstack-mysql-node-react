@@ -1,26 +1,17 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import ProductsRow from './ProductsRow';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
-
-
 function PanelProductosListado (){
+
+    const [listadoProductos, setlistadoProductos] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:3001/api/products")
+        .then((response) => response.json())
+        .then((data) => {
+            setlistadoProductos(data.products)})
+        }, []);
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -32,28 +23,27 @@ function PanelProductosListado (){
                                 <th>Producto</th>
                                 <th>Precio</th>
                                 <th>Descripcion</th>
-                                <th>Talle</th>
                                 <th>Categoria</th>
-                                <th>Color</th>
                                 <th>Brand</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Descripcion</th>
+                                <th>Categoria</th>
+                                <th>Brand</th>
                             </tr>
                         </tfoot>
-                        <tbody>
+                        <tbody>                     
                             {
-                            tableRowsData.map( ( row , i) => {
-                                return <ProductsRow { ...row} key={i}/>
-                            })
-                            }
-
+                            listadoProductos === 0 ? (<h3>Cargando</h3>) 
+                                : (
+                                listadoProductos.map( ( row , index) => {
+                                    return <ProductsRow product={row} key={index}/>
+                                }) 
+                            )}
                         </tbody>
                     </table>
                 </div>

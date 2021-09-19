@@ -4,17 +4,15 @@ import React from 'react';
 function ProductsRow(props){
     return (
                 <tr>
-                    <td>{props.Title}</td>
-                    <td>{props.Length}</td>
-                    <td>{props.Rating}</td>
-                    <td>
-                        <ul>
-                            {props.Categories.map( (category,i) => 
-                                <li key={`category ${i}`}>{category}</li>
-                            )}
-                        </ul>
+                    <td>{props.product.name}</td>
+                    <td>{props.product.price}</td>
+                    <td>{props.product.description}</td>
+                    <td>{props.product.categories.name}</td>
+                    <td>{props.product.brand === undefined ? ("n/a") : (
+                        props.product.brand.name
+                    )}
                     </td>
-                    <td>{props.Awards}</td>
+                    
                 </tr>
             )
     }

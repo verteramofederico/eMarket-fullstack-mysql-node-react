@@ -19,7 +19,7 @@ const productsAPIController = {
             });
 
             //Cosas para Productos
-            const products = await db.Product.findAll({include: ['brand',"colors","sizes",'categories'], attributes: ['id','name','description', "image"]})
+            const products = await db.Product.findAll({include: ['brand',"colors","sizes",'categories'], attributes: ['id','price','name','description', "image"]})
             const totalProducts = products.length;
             
             //Agregando link para detalle producto
