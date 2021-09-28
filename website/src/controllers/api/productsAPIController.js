@@ -18,7 +18,6 @@ const productsAPIController = {
                 categoriesArray.push(categoryCount);
             });
 
-            //Cosas para Productos
             const products = await db.Product.findAll({include: ['brand',"colors","sizes",'categories'], attributes: ['id','price','name','description', "image"]})
             const totalProducts = products.length;
             
@@ -34,28 +33,6 @@ const productsAPIController = {
             throw error;
         }
     },
-/*     'list': async (req, res) => {
-        await db.Product.findAll({
-            include: ['colors', "sizes", "brand", "categories"]
-        })
-        .then(products => {
-            let respuesta = {
-                meta: {
-                    status : 200,
-                    total: products.length,
-                    url: 'api/products'
-                },
-                data: 
-                    {
-                    count: products.length,
-                    products: products,
-                    
-                    }                                                       
-                
-            }
-                res.json(respuesta);
-            })
-    }, */
     'detail': (req, res) => {
         db.Product.findByPk(req.params.id, {include: ['brand',"colors","sizes",'categories'], attributes: ['id','name','description', "image"]})
             .then(product => {
@@ -69,8 +46,6 @@ const productsAPIController = {
                     urlImage: `http://localhost:3001/uploads/products/${product.image}`
                         
                     }
-                    // Una URL para la imagen del producto (para mostrar la imagen).
-                    //un array por cada relación de uno a muchos (categories, colors, sizes, etc).
                 }
                 res.json(respuesta);
             });

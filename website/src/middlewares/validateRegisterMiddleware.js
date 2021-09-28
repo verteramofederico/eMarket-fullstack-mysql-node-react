@@ -23,7 +23,8 @@ module.exports = [
     body("domicilio").notEmpty().withMessage("Debes ingresar un domicilio"),
     body("password").notEmpty().withMessage("Debes ingresar un password").bail()
     .isLength({ min: 6 }).withMessage("Password de minimo 6 caracteres").bail()
-    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage("Debe contener mayus, minus y caracter especial"),
+    //.matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage("Debe contener mayus, minus y caracter especial")
+    ,
     body("image").custom((value, { req }) => {
         let file = req.file;
 		let acceptedExtensions = ['.jpg', '.png', '.jpeg', ".gif"];

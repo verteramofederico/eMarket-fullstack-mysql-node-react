@@ -26,7 +26,7 @@ const productsController = {
             .then(product => {
                 // return res.send (products)
                 res.render('products/products', {
-                    product:req.params.category?product.filter(product => product.categoriesId == req.params.category):product
+                    product: req.params.category ? product.filter(product => product.categoriesId == req.params.category):product
                 })
             })
             .catch(error => res.send(error)) 
