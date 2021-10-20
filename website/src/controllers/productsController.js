@@ -1,4 +1,5 @@
 // fuente de datos
+
 const path = require("path")
 const router = require("../routes/productsRouter")
 const { validationResult } = require('express-validator');

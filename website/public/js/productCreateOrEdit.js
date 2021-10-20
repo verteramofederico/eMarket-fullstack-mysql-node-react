@@ -1,3 +1,5 @@
+// ts-check
+
 window.onload = function() {
     console.log("validando")
 
